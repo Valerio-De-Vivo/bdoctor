@@ -37,7 +37,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function doctors()
+    public function doctor()
     {
         return $this->hasMany('App\Doctor');
     }

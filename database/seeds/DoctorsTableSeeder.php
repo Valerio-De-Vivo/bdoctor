@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Doctor;
 use App\User;
+use App\Review;
 
 class DoctorsTableSeeder extends Seeder
 {

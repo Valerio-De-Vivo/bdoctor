@@ -14,4 +14,12 @@ class Doctor extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function review()
+    {
+        return $this->hasMany('App\Review');
+    }
+
+
+
 }

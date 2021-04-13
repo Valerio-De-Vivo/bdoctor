@@ -22,7 +22,6 @@ class UsersTableSeeder extends Seeder
             $new_doctor->password = $doctor['password'];
             $new_doctor->remember_token = $doctor['remember_token'];
             $new_doctor->save();
-
         }
     }
 }
