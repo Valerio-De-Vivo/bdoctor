@@ -25,5 +25,20 @@ class Doctor extends Model
         return $this->hasMany('App\Message');
     }
 
+    public function specializations()
+    {
+    return $this->belongsToMany('App\Specialization');
+    }
+
+    public function performance()
+    {
+    return $this->belongsToMany('App\Performance');
+    }
+
+    public function advertise()
+    {
+    return $this->belongsToMany('App\Advertise');
+    }
+
 
 }

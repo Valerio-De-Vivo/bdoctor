@@ -15,5 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call(DoctorsTableSeeder::class);
         $this->call(ReviewSeeder::class);
         $this->call(MessageSeeder::class);
+        $this->call(SpecializationSeeder::class);
+        $this->call(PerformanceSeeder::class);
+        $this->call(AdvertiseSeeder::class);
     }
 }
