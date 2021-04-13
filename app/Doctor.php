@@ -20,6 +20,10 @@ class Doctor extends Model
         return $this->hasMany('App\Review');
     }
 
+    public function message()
+    {
+        return $this->hasMany('App\Message');
+    }
 
 
 }
