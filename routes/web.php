@@ -14,8 +14,21 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+// Collegamento alla Home
 Route::get('/', 'HomeController@index')->name('index');
-Route::get('/doctor', 'DoctorController@index')->name('doctor');
+// Collegamento ai profili
+Route::get('/doctor', 'DoctorController@index')->name('show.doctors');
+// Collegamento dottori
+Route::get('/doctor{id}','DoctorController@showProfile')->name('show.doctor');
+// Ricerca per città
+// Route::post('/search','DoctorController@search')->name('search');
+// Da controllare
+// Inivio messaggio guest
+Route::resource('/send_message', 'GuestMessageController');
+// Inivio recensione guest
+Route::resource('/send_review', 'ReviewController');
+
+
 
 Auth::routes();
 
@@ -26,6 +39,12 @@ Route::prefix('admin')
 ->namespace('Admin')
 ->middleware('auth')
 ->group(function () {
+// Rotta home
 Route::get('/', 'DoctorController@index')->name('home');
+// Rotta profilo
 Route::resource('/doctor', 'DoctorController');
+// Rotta messaggio 
+Route::resource('/message', 'AdminMessageController');
+// Rotta recensioni 
+Route::resource('/review', 'AdminReviewController');
 });
