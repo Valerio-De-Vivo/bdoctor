@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Doctor;
+use App\Advertise;
+use App\Message;
+use App\Review;
+use App\Specialization;
+use App\Perfomance;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
@@ -14,24 +19,36 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $doc = Doctor::all();
+        $profilo = Doctor::all();
+
         $data = [
-            'doctor' => $doc
+            'profilo' => $profilo,
         ];
 
-        dd($data['doctor']);
+        return view('guest.doctor.index', $data);
     }
 
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Doctor  $doctor
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Doctor $doctor)
+    public function showProfile($id)
     {
-        //
+
+        $doctor = Doctor::find($id);
+
+        $data = [
+            'profile' => $doctor,
+        ];
+
+        return view ('guest.doctor.show',$data);
+        
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->all();
+        $doctor = Doctor::all();
+        $data = [
+            'doctor' => $doctor,
+        ];
+        return view('search',$data);
     }
 
 }
