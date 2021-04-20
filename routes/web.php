@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'HomeController@index')->name('guest-index');
+Route::get('/ricerca', function () {return view('guest.search');})->name('ricerca-avanzata');
 
-// Collegamento alla Home
-Route::get('/', 'HomeController@index')->name('index');
+
 // Collegamento ai profili
 Route::get('/doctor', 'DoctorController@index')->name('show.doctors');
 // Collegamento dottori
@@ -39,12 +40,15 @@ Route::prefix('admin')
 ->namespace('Admin')
 ->middleware('auth')
 ->group(function () {
-// Rotta home
-Route::get('/', 'DoctorController@index')->name('home');
+
+Route::get('/', 'DoctorController@index')->name('dashboard-dottore');
+Route::get('/profilo', 'DoctorController@create')->name('profilo-dottore');
+Route::get('/sponsorizzazioni', function () {return view('admin.sponsor');})->name('sponsorizzazioni-dottore');
+
 // Rotta profilo
 Route::resource('/doctor', 'DoctorController');
-// Rotta messaggio 
+// Rotta messaggio
 Route::resource('/message', 'AdminMessageController');
-// Rotta recensioni 
+// Rotta recensioni
 Route::resource('/review', 'AdminReviewController');
 });

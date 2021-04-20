@@ -18,7 +18,7 @@ class DoctorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $id = Auth::id();
 
         $profilo = Doctor::find($id);
@@ -27,7 +27,7 @@ class DoctorController extends Controller
             'item' => $profilo
           ];
 
-        return view('da mettere', $data);
+        return view('admin.profile', $data);
     }
 
     /**
@@ -47,7 +47,7 @@ class DoctorController extends Controller
           'performance' => $performance,
         ];
 
-        return view('da mettere', $data);
+        return view('admin.info', $data);
     }
 
     /**
@@ -66,7 +66,7 @@ class DoctorController extends Controller
             [
               'telephone'=>'required|max:20',
             ]);
-        
+
         $newDoctor = new Doctor();
 
         $newDoctor->user_id= $id;
@@ -86,7 +86,7 @@ class DoctorController extends Controller
             $newDoctor->perfomances()->sync($data['performances']);
         }
 
-        return redirect()->route('da mettere')->with('status', 'Benvenuto');
+        return redirect()->route('admin.profile')->with('status', 'Benvenuto');
     }
 
     /**
@@ -141,12 +141,12 @@ class DoctorController extends Controller
         $doctor = Doctor::find($id);
 
         $data = $request->all();
-        
+
         $request->validate(
             [
               'telephone'=>'required|max:20',
             ]);
-        
+
         if(array_key_exists('cv',$data)){
             $cv = Storage::put('cv', $data['cv']);
             $data['cv'] = $cv;
@@ -161,7 +161,7 @@ class DoctorController extends Controller
         if(array_key_exists('perfomances',$data)){
             $doctor->perfomances()->sync($data['perfomances']);
           }
-        
+
         return redirect()->route('da mettere')->with('status','Modificato');
     }
 
