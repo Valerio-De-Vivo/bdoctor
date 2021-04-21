@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
@@ -18,9 +19,9 @@ class AdminReviewController extends Controller
     {
         $id = Auth::id();
 
-        $user = User::where('id', $id)->orderBy('created_at', 'message_user')->get();
+        $user = User::where('id', $id)->orderBy('created_at', 'desc')->get();
 
-        $reviews = Review::orderBy('created_at' ,'message_user')->get();
+        $reviews = Review::orderBy('created_at' ,'desc')->get();
 
         $data = [
             'user' => $user,

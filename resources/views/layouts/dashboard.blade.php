@@ -25,7 +25,7 @@
         <img src="{{ asset('img/common/logo.png') }}" alt="logo" style="width: 120px;">
         <ul class="navbar-nav px-3 ml-auto">
             <li class="nav-item">
-                <a class="nav-link" style="color: #184E77" href="{{route('guest-index')}}">Homepage Bdoctors</a>
+                <a class="nav-link" style="color: #184E77" href="#">Homepage Bdoctors</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" style="color: #184E77" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
