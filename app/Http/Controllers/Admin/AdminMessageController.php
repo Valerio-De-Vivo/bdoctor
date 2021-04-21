@@ -30,7 +30,7 @@ class AdminMessageController extends Controller
             'message' => $messages
         ];
 
-        return view('admin.profile',$data);
+        return view('admin.message',$data);
     }
 
     /**

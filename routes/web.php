@@ -20,7 +20,7 @@ Route::get('/ricerca', function () {return view('guest.search');})->name('ricerc
 // Collegamento ai profili
 Route::get('/doctor', 'DoctorController@index')->name('show.doctors');
 // Collegamento dottori
-Route::get('/doctor{id}','DoctorController@showProfile')->name('show.doctor');
+Route::get('/doctor/{id}','DoctorController@showProfile')->name('show.doctor');
 // Ricerca per città
 // Route::post('/search','DoctorController@search')->name('search');
 // Da controllare
