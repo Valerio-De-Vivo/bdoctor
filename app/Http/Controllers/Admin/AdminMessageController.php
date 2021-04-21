@@ -29,7 +29,7 @@ class AdminMessageController extends Controller
             'message' => $messages
         ];
 
-        return view('messages.index',$data);
+        return view('admin.profile',$data);
     }
 
     /**

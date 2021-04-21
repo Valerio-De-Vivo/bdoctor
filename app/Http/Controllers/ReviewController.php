@@ -38,8 +38,10 @@ class ReviewController extends Controller
         $data = $request->all();
 
         $request->validate([
-            'email_user'=>'required',
-            'vote_user'=>'required|max:1',
+            'doctor_id'=>'required',
+            'name_user'=>'required|max:50',
+            'surname_user'=>'required|max:50',
+            'vote_user'=>'required|max:1'
         ]);
 
         $newReview = New Review();

@@ -37,6 +37,10 @@ class DoctorController extends Controller
      */
     public function create()
     {
+        $id = Auth::id();
+
+        $profilo = Doctor::find($id);
+
         $specialization = Specialization::all();
 
         $performance = Performance::all();
@@ -45,6 +49,7 @@ class DoctorController extends Controller
         [
           'specializations' => $specialization,
           'performance' => $performance,
+          'dati_dottore' => $profilo
         ];
 
         return view('admin.info', $data);
@@ -64,7 +69,11 @@ class DoctorController extends Controller
 
         $request->validate(
             [
-              'telephone'=>'required|max:20',
+              'name'=>'required|max:50',
+              'surname'=>'required|max:50',
+              'address'=>'required|max:200',
+              'city'=>'required|max:100',
+              'telephone'=>'required|max:15',
             ]);
 
         $newDoctor = new Doctor();
@@ -103,7 +112,7 @@ class DoctorController extends Controller
             'profile' => $doctor
         ];
 
-        return view('da mettere', $data);
+        return view('admin.profile', $data);
     }
 
     /**
@@ -126,7 +135,7 @@ class DoctorController extends Controller
           'performances' => $performance,
         ];
 
-        return view('da mettere',$data);
+        return view('admin.info',$data);
     }
 
     /**
@@ -144,6 +153,10 @@ class DoctorController extends Controller
 
         $request->validate(
             [
+              'name'=>'required|max:50',
+              'surname'=>'required|max:50',
+              'address'=>'required|max:200',
+              'city'=>'required|max:100',
               'telephone'=>'required|max:20',
             ]);
 
@@ -162,7 +175,7 @@ class DoctorController extends Controller
             $doctor->perfomances()->sync($data['perfomances']);
           }
 
-        return redirect()->route('da mettere')->with('status','Modificato');
+        return redirect()->route('admin.profile')->with('status','Modificato');
     }
 
     /**
@@ -180,7 +193,7 @@ class DoctorController extends Controller
 
         $doctor->delete();
 
-        return redirect()->route('profilo.index')->with('status','Eliminato');
+        return redirect()->route('guest.home')->with('status','Eliminato');
 
     }
 }

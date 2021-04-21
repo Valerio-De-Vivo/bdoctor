@@ -27,7 +27,7 @@ class AdminReviewController extends Controller
             'reviews' => $reviews
         ];
 
-        return view('reviews.index',$data);
+        return view('admin.profile',$data);
     }
 
     /**

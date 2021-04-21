@@ -38,20 +38,20 @@ class GuestMessageController extends Controller
         $data = $request->all();
 
         $request->validate([
-            'email_user'=>'required',
-            'email'=>'required|max:50',
+            'doctor_id'=>'required',
             'name_user'=>'required|max:50',
             'surname_user'=>'required|max:50',
-            'message'=>'required',
+            'telephone_user'=>'required|max:15',
+            'message'=>'required'
         ]);
 
-        $newMex = New Message();
+        $messaggio = New Message();
 
-        $newMex->fill($data);
+        $messaggio->fill($data);
 
-        $newMex->save();
+        $messaggio->save();
 
-        return redirect()->route('show.doctors')->with('status', 'Inviato');
+        return redirect()->route('show.doctors')->with('status', 'Messaggio inviato');
     }
 
     /**
