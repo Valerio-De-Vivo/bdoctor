@@ -51,4 +51,6 @@ Route::resource('/doctor', 'DoctorController');
 Route::resource('/message', 'AdminMessageController');
 // Rotta recensioni
 Route::resource('/review', 'AdminReviewController');
+// Rotta statistiche
+Route::resource('/statistics', 'AdminStatisticsController');
 });
