@@ -16,14 +16,12 @@
 
 .green {
   background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
-  box-shadow: 3px 3px 10px 0 #184e77;
   text-shadow: 0 0 10px #184e7749;
   color: white !important;
 }
 
 .btn.green:hover {
   background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
-  box-shadow: 3px 3px 15px 0 #184e77a9;
   text-shadow: 0 0 0 #76c893;
 }
 
@@ -251,6 +249,7 @@ a.nav-link {
 
 .sidebar-dash ul {
   height: 100%;
+  padding: 20px 0;
 }
 
 .sidebar-dash ul li {
@@ -260,6 +259,15 @@ a.nav-link {
 
 .sidebar-dash ul li a {
   color: #168aad;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.active-dash {
+  color: white !important;
+  background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
+  padding: 10px 20px;
 }
 
 /*!

@@ -1,6 +1,6 @@
 <header class="main-menu">
     <div class="logo-section">
-        <img class="logo" src="img/common/logo.png" alt="logo">
+        <img class="logo" src="{{ asset('img/common/logo.png') }}" alt="logo">
     </div>
 
     <div class="menu-item">
