@@ -42,7 +42,7 @@ class GuestMessageController extends Controller
             'name_user'=>'required|max:50',
             'surname_user'=>'required|max:50',
             'telephone_user'=>'required|max:15',
-            'message'=>'required'
+            'message_user'=>'required'
         ]);
 
         $messaggio = New Message();
@@ -51,7 +51,7 @@ class GuestMessageController extends Controller
 
         $messaggio->save();
 
-        return redirect()->route('show.doctors')->with('status', 'Messaggio inviato');
+        return redirect()->route('show.doctor', ['id' => $messaggio->doctor_id])->with('status', 'Messaggio inviato');
     }
 
     /**

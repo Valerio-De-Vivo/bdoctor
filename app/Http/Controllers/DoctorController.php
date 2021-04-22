@@ -38,7 +38,7 @@ class DoctorController extends Controller
         ];
 
         return view ('guest.doctor.show',$data);
-        
+
     }
 
     public function search(Request $request)
