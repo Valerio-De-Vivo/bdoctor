@@ -12,7 +12,8 @@
     
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
-    
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        
         </head>
     <body >
         {{-- MENU  --}}
@@ -33,16 +34,118 @@
             </div>
         </div>
 
+        {{-- SPECIALIZZAZIONI  --}}
+
         <section id="app" class="categories">
             <h2>Le specializzazioni più richieste, anche in videoconsulto</h2>
             <div class="category">
-
+                <div style="text-align: center">
+                    <img src="{{ asset('img/common/icon-ortopedia.png') }}" alt="">
+                    <h3>Ortopedia</h3>
+                </div>
             </div>
+
+            <div class="category">
+                <div style="text-align: center">
+                    <img src="{{ asset('img/common/icon-dermatologo.png') }}" alt="">
+                    <h3>Dermatologo</h3>
+                </div>
+            </div>
+
+            <div class="category">
+                <div style="text-align: center">
+                    <img src="{{ asset('img/common/icon-ginecologia.png') }}" alt="">
+                    <h3>Ginecologo</h3>
+                </div>
+            </div>
+
+            <div class="category">
+                <div style="text-align: center">
+                    <img src="{{ asset('img/common/icon-otorino.png') }}" alt="">
+                    <h3>Otorino</h3>
+                </div>
+            </div>
+
+            <div class="category">
+                <div style="text-align: center">
+                    <img src="{{ asset('img/common/icon-oculista.png') }}" alt="">
+                    <h3>Oculista</h3>
+                </div>
+            </div>
+
+            <div class="category">
+                <div style="text-align: center">
+                    <img src="{{ asset('img/common/icon-urologo.png') }}" alt="">
+                    <h3>Urologo</h3>
+                </div>
+            </div>
+
+            <div class="category">
+                <div style="text-align: center">
+                    <img src="{{ asset('img/common/icon-cardiologo.png') }}" alt="">
+                    <h3>Cardiologo</h3>
+                </div>
+            </div>
+            <a class="cta" href="{{ route('show.doctors') }}">
+                Cerca tra i migliori medici nel campo
+            </a>
         </section>
 
+        {{-- COME FUNZIONA  --}}
+
+        <div id="come-funziona" class="jumbo">
+            <div class="col-md-6 banner-text">
+                <div class="centrato">
+                    <h3>Prenota il videoconsulto</h3>
+                    <p>
+                        Trova lo specialista ideale che offra il videoconsulto. Scegli data e ora e prenota la tua visita con un click. 
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_wdXBRc.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+                {{-- <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_l13zwx3i.json"  background="transparent"  speed="1"  style="width: 100%; height: 700px;"  loop  autoplay></lottie-player> --}}
+
+            </div>
+        </div>
+
+        <div id="come-funziona" class="jumbo">
+            <div class="col-md-6">
+                <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_42B8LS.json"  background="transparent"  speed="1"  style="width: 100%; height:700px;"  loop  autoplay></lottie-player>
+
+            </div>
+            <div class="col-md-6 banner-text">
+                <div class="centrato">
+                    <h3>Ricevi le istruzioni</h3>
+                    <p>
+                        Ricevi una mail con le istruzioni per accedere al videoconsulto. Utilizza la nostra messaggistica privata per interagire con il medico. 
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="come-funziona" class="jumbo">
+            
+            <div class="col-md-6 banner-text">
+                <div class="centrato">
+                    <h3>Effettua la visita</h3>
+                    <p>
+                        Accedi al servizio all'interno della tua area personale all'ora e alla data prestabilita. Troverai ad attenderti lo specialista richiesto per la consulenza. 
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_vPnn3K.json"  background="transparent"  speed="1"  style="width: 100%; height: 700px;"  loop  autoplay></lottie-player>
+
+            </div>
+            
+        </div>
 
 
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_wdXBRc.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    
+        <script src="{{ asset('js/app.js') }}"></script>
+    
+    
     </body>
 </html>

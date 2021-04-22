@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -128,7 +132,7 @@ button {
     a {
         color: #168aad;
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 0.25rem;
 
         &:hover {
             color: white;
@@ -286,12 +290,19 @@ button {
 }
 
 .categories {
-    height: 300px;
     background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    padding: 50px 10px;
+
+    h2 {
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
     .category {
         width: 200px;
@@ -299,6 +310,41 @@ button {
         background-color: #fff;
         height: 200px;
         border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 40%;
+        }
+
+        h3 {
+            color: #184e77;
+            margin-top: 20px;
+        }
+    }
+
+    .cta {
+        margin-top: 30px;
+        color: #d9ed92;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+#come-funziona {
+    height: 700px;
+
+    h3 {
+        color: #76c893;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: #168aad;
     }
 }
 
