@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', 'HomeController@index')->name('guest-index');
+
 Route::get('/ricerca', function () {return view('guest.search');})->name('ricerca-avanzata');
 
 

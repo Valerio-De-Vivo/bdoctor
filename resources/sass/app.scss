@@ -5,11 +5,22 @@
     font-family: "Nunito", sans-serif;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .btn {
     padding: 18px 45px;
     background-color: transparent;
     border-radius: 100em;
     position: relative;
+    border: none !important;
+    color: #78b0e4 !important;
 }
 
 .green {
@@ -31,21 +42,6 @@ button {
     color: #fff !important;
 }
 
-footer ul li h5 {
-    color: #dfe9ec;
-}
-
-footer ul li a,
-.box-bottom-copy a {
-    color: #59798d;
-}
-
-footer ul li a:hover,
-.box-bottom-copy a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
 .mio {
     width: 100%;
     height: 100%;
@@ -55,16 +51,6 @@ footer ul li a:hover,
 
 .pippo li {
     margin-right: 10px;
-}
-
-.dashboard-link {
-    color: #168aad;
-}
-
-.dashboard-active,
-.dashboard-active:hover,
-.dashboard-link:hover {
-    color: #184e77;
 }
 
 #results .container-special {
@@ -123,29 +109,13 @@ footer ul li a:hover,
     margin-top: 20px;
 }
 
-#results .overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: all 0.5s;
-    z-index: -1;
-}
-
-#results .card-special:hover ~ .overlay {
-    opacity: 1;
-    z-index: 9;
-}
-
 #results .card-special:hover {
     z-index: 99;
 }
 
+//.. MENU
+
 .main-menu {
-    // padding: 20px;
     height: 100px;
     display: flex;
     justify-content: space-around;
@@ -167,75 +137,72 @@ footer ul li a:hover,
             text-decoration: none;
         }
     }
-}
 
-.logo-section {
-    width: 20%;
-}
+    .logo-section {
+        width: 20%;
+    }
 
-.logo {
-    height: 100px;
-    margin-left: 20px;
-}
+    .logo {
+        height: 100px;
+        margin-left: 20px;
+    }
 
-.menu-item {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-    ul {
-        height: 100%;
+    .menu-item {
+        width: 60%;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    li {
-        padding: 0 20px;
-    }
-}
-
-a.nav-link {
-    padding: 0;
-}
-
-.login {
-    width: 20%;
-    height: 100%;
-    justify-content: flex-end;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-right: 20px;
-
-    ul {
-        height: 50%;
-        margin: 0;
-        padding: 0;
-
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        ul {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
         li {
-            margin: 0;
-            padding: 0;
+            padding: 0 20px;
         }
     }
+
+    a.nav-link {
+        padding: 0;
+    }
+
+    .login {
+        width: 20%;
+        height: 100%;
+        justify-content: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-right: 20px;
+
+        ul {
+            height: 50%;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    #log,
+    #reg {
+        font-size: 1rem;
+        margin: 3px 0;
+    }
 }
 
-#log,
-#reg {
-    font-size: 1rem;
-    margin: 3px 0;
-}
-
-.active {
-    color: white;
-    background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
-    color: white !important;
-    text-decoration: none;
-}
+// ..DASHBOARD
 
 .container-dashboard {
     display: flex;
 }
+
+// ..SIDEBAR
 
 .sidebar-dash {
     width: 20%;
@@ -262,10 +229,77 @@ a.nav-link {
     }
 }
 
+// ..PULSANTI ACTIVE
+
+.active {
+    color: white;
+    background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
+    color: white !important;
+    text-decoration: none;
+}
+
 .active-dash {
     color: white !important;
     background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
     padding: 10px 20px;
+}
+
+.centrato {
+    width: 100%;
+    padding: 0 10%;
+}
+
+// ..HOMEPAGE
+
+.jumbo {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+
+    .banner-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .centrato {
+            h1 {
+                font-size: 6rem;
+                color: #76c893;
+            }
+            h3 {
+                font-size: 3rem;
+                color: #168aad;
+                width: 100%;
+            }
+
+            a {
+                margin: 20px 0;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.categories {
+    height: 300px;
+    background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .category {
+        width: 200px;
+        height: 200px;
+        background-color: #fff;
+        height: 200px;
+        border-radius: 15px;
+    }
 }
 
 // Variables

@@ -16,7 +16,7 @@
             </li>
             
             <li>
-                <a class=" {{ (Request::route()->getName() == 'contatti') ? 'active' : '' }} " href="">Contatti</a>
+                <a  href="#contatti">Contatti</a>
             </li>
         </ul>
     </div>
@@ -27,6 +27,15 @@
             @auth
               <li class="">
                 <a class="btn green" href="{{ route('dashboard-dottore') }}">Dashboard dottore</a>
+                <a class="my-logout" style="font-size: .8rem" href="{{ route('logout') }}"
+                                      onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
               </li>
             @else
               <li class="">

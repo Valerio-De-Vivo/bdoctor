@@ -14,11 +14,35 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
     
         </head>
-    <body>
+    <body >
         {{-- MENU  --}}
 
         @include('layouts/partials/header')
 
-        home
+        <div class="jumbo">
+            <div class="col-md-7 banner-text">
+                <div class="centrato">
+                    <h1>BDoctor</h1>
+                    <h3>Il primo portale italiano di dottori</h3>
+                    <a class="btn green" href="{{ route('ricerca-avanzata') }}"> Ricerca dottore </a>
+                    <a class="btn" href="#come-funziona"> Come funziona </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('img/common/banner-home.png') }}" alt="">
+            </div>
+        </div>
+
+        <section id="app" class="categories">
+            <h2>Le specializzazioni più richieste, anche in videoconsulto</h2>
+            <div class="category">
+
+            </div>
+        </section>
+
+
+
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_wdXBRc.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
     </body>
 </html>
