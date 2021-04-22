@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use App\Doctor;
-use App\User;
 use App\Review;
 
 class DoctorsTableSeeder extends Seeder
@@ -18,8 +17,8 @@ class DoctorsTableSeeder extends Seeder
 
         foreach ($doctors as $doctor) {
             $new_doctor = new Doctor();
-            $userCount = User::count();
-            $new_doctor->user_id = rand(1,$userCount);
+            $countDoctor = Doctor::count() + 1;
+            $new_doctor->user_id = $countDoctor;
             $new_doctor->name = $doctor['name'];
             $new_doctor->surname = $doctor['surname'];
             $new_doctor->address = $doctor['address'];

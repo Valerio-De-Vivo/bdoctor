@@ -19,7 +19,7 @@ class CreateMessagesTable extends Migration
             $table->foreign('doctor_id')->references('id')->on('doctors');
             $table->string('name_user', 50);
             $table->string('surname_user', 50);
-            $table->string('telephone_user', 20);
+            $table->string('mail_user', 100);
             $table->text('message_user');
             $table->timestamps();
         });

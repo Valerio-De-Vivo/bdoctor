@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Cron\HoursField;
 use App\Message;
-use App\User;
 
 
 class AdminMessageController extends Controller
@@ -21,16 +20,13 @@ class AdminMessageController extends Controller
     {
         $id = Auth::id();
 
-        $user = User::where('id', $id)->orderBy('created_at', 'desc')->get();
-
-        $messages = Message::orderBy('created_at' ,'desc')->get();
+        $messages = Message::where('doctor_id', '=', $id)->orderBy('created_at', 'desc')->get();
 
         $data = [
-            'user' => $user,
-            'message' => $messages
+            'messages' => $messages
         ];
 
-        return view('admin.message',$data);
+        return view('admin.message', $data);
     }
 
     /**
@@ -94,12 +90,10 @@ class AdminMessageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Message $mess)
     {
-        $message = Message::find($id);
+        $mess->delete();
 
-        $message->delete();
-
-        return redirect()->route('message.index')->with('status','Cancellato');
+        return redirect()->route('admin.message')->with('status','Ricchiesta cancellata');
     }
 }

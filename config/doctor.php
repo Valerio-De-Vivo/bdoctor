@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 return  [
@@ -12,7 +12,7 @@ return  [
         "photo" => "https://s.dottori.it/uploads/img/68b6ab/30/133403/88aa2d_0d51d_c0d54.jpg",
         "cv" => "Il Dott. Rocco si è laureato in Medicina e Chirurgia nel 1998 con il massimo dei voti, e si è successivamente specializzato in Urologia nel 2003 con lode. Assunto all'Istituto Europeo di Oncologia dal 2003, dal 2005 ha iniziato ad occuparsi di chirurgia robotica effettuando stage di formazione in Italia e all’estero (Bordeaux). Ha portato l’attività robotica presso lo IEO che ha acquisito il sistema da Vinci nel novembre 2006. Dal 2008 al 2009, dopo il conseguimento dell’abilitazione chirurgica per lo stato della Florida (USA) per meriti, ha collaborato con il maggior esperto mondiale di chirurgia robotica del cancro prostatico, Vipul R Patel, con il quale ha eseguito numerosi interventi chirurgici. Dal febbraio 2011 è Dirigente Medico di I Livello presso l’Unità Operativa di Urologia della Fondazione IRCCS Ca’ Granda Ospedale Maggiore Policlinico; è stato inoltre Direttore della scuola di Chirurgia Robotica dell’Istituto Europeo di Oncologia di Milano e Professore a contratto della Scuola di Specializzazione in Urologia dell’Università degli Studi di Milano, per conto della quale ha svolto un'intensa attività accademica.",
         "email"=> "bernardo.rocco@gmail.com",
-        "password"=> "bernardo-rocco",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "abc",
     ],
     [
@@ -24,7 +24,7 @@ return  [
         "photo" => "https://s1.dottori.it/uploads/img/68b6ab/49/133457/1973f7_44f7b_c0d54.jpg",
         "cv" => "Il Prof. Schoenhuber è Medico Chirurgo specialista in Ortopedia e Traumatologia e in Medicina dello Sport. Nel 1980 in seguito a concorso pubblico ha prestato servizio in qualità di assistente presso l'Istituto Ortopedico Gaetano Pini, e ha contribuito con la sua esperienza a ridurre notevolmente i rischi degli atleti sulle piste di gara dello sci alpino, introducendo modifiche tecniche, sia nei percorsi che nei materiali. Nel 1988 ha ricoperto l'incarico di Dirigente di 2° livello presso l'Istituto Ortopedico Galeazzi di Milano. All'inizio la sua specialità chirurgica si è sviluppata sulla protesizzazione dell'anca, in seguito sulla chirurgia della spalla e nella traumatologia. Dato il suo impegno ad alto livello soprattutto nell'ambito sportivo, la sua specialità chirurgica si è ora sviluppata nella chirurgia artroscopica del ginocchio, caviglia e spalla. Ha eseguito numerosi interventi chirurgici su atleti professionisti di altissimo livello tra i quali medaglie olimpiche. E' Professore a contratto presso la Scuola di Specializzazione di Ortopedia e Traumatologia dell'Università di Milano e collabora con il CNR nello studio della fisiologia e biomeccanica per il miglioramento delle prestazioni degli atleti nello sci.",
         "email"=> "herbert.scho12@gmail.com",
-        "password"=> "herberto-sparalestro",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "def",
     ],
     [
@@ -36,7 +36,7 @@ return  [
         "photo" => "https://s.dottori.it/uploads/img/68b6ab/c1/133297/d7932b_ee1d0_c0d54.jpg",
         "cv" => "Il Prof. Claudio Corbellini si occupa dal 1976, anno della Laurea con lode in Medicina e Chirurgia, di agopuntura. Si è specializzato in Neurologia nel 1980 e in Medicina Legale e delle Assicurazioni nel 1983. E' insegnante di Agopuntura all'Università di Pavia dal 1985, e insegnante dei Corsi di Perfezionamento di Agopuntura e Medicine non Convenzionali dell'Università di Milano dal 2001. Tratta con agopuntura sia le forme dolorose - su cui ha tenuto, quale Professore a contratto, il Corso  alla Scuola di Specializzazione in Anestesia e Rianimazione dell'Università di Pavia - sia l'ansia, gli attacchi di panico e la depressione. Insegna ai Corsi del Villaggio Globale (riconosciuti dall'Unesco). Studia i rapporti tra psico-neuro-endocrino-immunologia e stress. Collabora con l'OMS, con la Regione Lombardia e con l'Istituto Superiore di Sanità Italiano. Ha collaborato per circa 15 anni con il Reparto di Ostetricia dell'Università di Pavia e tratta l'infertilità maschile e femminile, sia in abbinamento alla fecondazione assistita, che come trattamento autonomo.",
         "email"=> "claudio.corb@gmail.com",
-        "password"=> "claudio-dottore",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "ghi",
     ],
     [
@@ -48,7 +48,7 @@ return  [
         "photo" => "https://s.dottori.it/uploads/img/68b6ab/3a/943543/327d46_3937d_c0d54.jpg",
         "cv" => "La Dott.ssa Patrizia Boni ha conseguito la Laurea in Medicina e Chirurgia presso l'Università degli Studi di Milano in data 11/11/1982 con votazione 110/110 e lode. Successivamente ha inoltre conseguito la Specializzazionein Ostetricia e Ginecologia, sempre presso l'Università degli Studi di Milano, in data 10/7/1987 con votazione 70 e lode. In seguito ha inoltre ampliato la sua formazione effettuando un Corso di Formazione in Sessuologia e Psicoterapia delle Disfunzioni sessuali negli anni 1997-1999. Si è iscritta all'Ordine Provinciale dei Medici Chirurghi di Milano in data 11/2/1983 al N° 22913. Dal 1983 la Dott.ssa Boni è in servizio presso ASST - Grande Ospedale Metropolitano Niguarda di Milano. Inoltre è iscritta all'Associazione Ostetrici Ginecologi Ospedalieri Italiani (AOGOI). Attualmente visita in libera professione su appuntamento presso il suo Studio Medico sito in Via Pacini, 8 a Milano.",
         "email"=> "patrizia.boni@gmail.com",
-        "password"=> "patrizia-boni",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "lmn",
     ],
     [
@@ -60,7 +60,7 @@ return  [
         "photo" => "https://s1.dottori.it/uploads/img/68b6ab/a5/133521/ba4ce3_88635_c0d54.jpg",
         "cv" => "La Dottoressa Silvia Simonetti ha conseguito il Diploma di Laurea in Fisioterapia nell’anno accademico 1999-2000, presso l’Università degli Studi di Milano con la valutazione di 110/110 e lode. Da aprile 2001 a maggio 2010 ha prestato servizio presso la Fondazione Don Carlo Gnocchi Santa Maria Nascente di Milano, nel reparto di riabilitazione neurologica adulti, dove, oltre ad occuparsi di riabilitazione neuromotoria, confezionava splint in materiale termoplastico e bendaggi funzionali. Si è specializzata nell'effettuare trattamenti posturali (metodo Mézières-Bertelè). Dal 2000 al 2001 ha lavorato per il servizio domiciliare della Fondazione Don Carlo Gnocchi e presso l’ambulatorio di Fisioterapia e Riabilitazione di via M.Gioia, 70 a Milano. Ha inoltre collaborato con lo studio fisioterapico “Belfiore terme”. Attualmente esercita la professione come libera professionista.",
         "email"=> "silvia.simonetti@gmail.com",
-        "password"=> "silvia-simonetti",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "opq",
     ],
     [
@@ -72,7 +72,7 @@ return  [
         "photo" => "https://s1.dottori.it/uploads/img/68b6ab/83/209775/26e0d0_990ab_c0d54.jpg",
         "cv" => "Il Dr Vaiarelli E' docente del Master 'Scienza della riproduzione e tecniche di riproduzione assistita' presso l'Università degli studi di Urbino. E' docente presso la Fertyschool. Ha inoltre svolto una intensa attività di ricerca scientifica.Ha partecipato a più di 160 congressi nazionali ed internazionali nell'ambito della Medicina della Riproduzione, alcuni di questi in qualità di relatore, moderatore e responsabile scientifico. Svolge l'attività medica presso Centro g.en.e.r.a. - Clinica Valle Giulia a Roma, dove riceve su appuntamento.",
         "email"=> "alberto.vaiarelli@gmail.com",
-        "password"=> "alberto-vai",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "rst",
     ],
     [
@@ -84,7 +84,7 @@ return  [
         "photo" => "https://s.dottori.it/uploads/img/68b6ab/8d/208274/54ac12_98411_c0d54.jpg",
         "cv" => "lorem ipsum",
         "email"=> "andrea.lenzi@gmail.com",
-        "password"=> "andrera-lenzi",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "uvz",
     ],
     [
@@ -96,7 +96,7 @@ return  [
         "photo" => "https://s1.dottori.it/uploads/img/68b6ab/db/754667/5373e1_4e2db_c0d54.jpg",
         "cv" => "La Dott.ssa Ernesta Petrangeli si laurea in Psicologia presso l'Università  di Roma, presso la cattedra di teorie e tecniche delle dinamiche di gruppo, presieduta dal Prof. Paolo Cruciani, con una tesi sui Gruppi Balint. Svolge il tirocinio post lauream, presso la Asl Rm1, nella struttura del centro diurno. Dopo l’abilitazione alla professione di psicologo, conduce i laboratori di scrittura e di realizzazione di gioielli, del centro diurno presso la asl Rm1. Dopo aver indirizzato il proprio interesse nell’ambito cinofilo e dopo aver conseguito la qualifica di tecnico cinofilo parasportivo, continua la collaborazione a tutt’oggi con la asl Rm1 dove conduce un’attività cinofila parasportiva. Perfeziona la propria Specializzazione inI.A.A ottenendo le qualifiche di: Referente TAA, Responsabile e Referente EAA/AAA In seguito a questa formazione conduce seminari in vari centri cinofili in Italia, sulla importanza terapeutica del cane in varie patologie, l’importanza della relazione cane/proprietario. Conduce anche seminari sull’aggressività, sull’ansia generalizzata e sull’ansia pre-gara sempre in ambito cinofilo. Sempre in ambito cinofilo, lavora con il disagio fisico e psichico, Collabora con gli educatori cinofili, affiancandoli nel lavoro con i bambini, proponendo un lavoro sulla motivazione e sull’autostima. Conduce gruppi di preparazione alle gare gruppi di lavoro con gli operatori del centro cinofilo. Continua la sua formazione, scegliendo una specializzazione di quattro anni in psicoterapia analitica e gruppo analisi presso la C.O.I.R.A.G. che sta ultimando.",
         "email"=> "ernesta.petras@gmail.com",
-        "password"=> "ernesta33",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "aca",
     ],
     [
@@ -108,7 +108,7 @@ return  [
         "photo" => "https://s.dottori.it/uploads/img/68b6ab/b2/881723/ce5fa8_f0cca_c0d54.jpg",
         "cv" => "Laureata in Psicologia Clinica e di Comunità presso “La Sapienza” di Roma nel 2005 e specializzata in psicoterapia Reichiana presso la S.I.A.R. (Società di Analisi Reichiana), scuola di specializzazione ad indirizzo psico-corporeo (specialista in Vegetoterapia Carattero-analitica), Socia Analista e Membro del Comitato Direttivo dal 2012 e attualmente Segretario. Negli anni ha continuato a nutrire il suo interesse e passione per il corpo e il movimento attraverso master e training in DMT (Danza Movimento Terapia) e frequentando corsi di teatrodanza, teatro espressivo, danza classica e contemporanea. Dal 2012 specializzata in EMDR (Eye Movement Desensitization and Reprocessing), metodo psicoterapico strutturato che facilita il trattamento di diverse psicopatologie e problemi legati ad eventi traumatici. Attualmente specializzanda in TMI (Terapia Metacognitiva Interpersonale) approccio appartenente all’ultima generazione delle psicoterapie cognitive sviluppato principalmente per il trattamento dei disturbi di personalità. Consulente scientifico della LIDAP (Lega Italiana contro i disturbi d’ansia da agorafobia e da attacchi di panico) dal 2011; Coordinatrice Responsabile del gruppo di Roma dell’AIE (Associazione Italiana Endometriosi Onlus) dal 2005 al 2016; Consulente del Servizio consulenza giovani W. Reich dal 2012 di cui attualmente sono Segretario e Tesoriere",
         "email"=> "annalisa.limosani@gmail.com",
-        "password"=> "annalisa-limo",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "lol",
     ],
     [
@@ -120,9 +120,9 @@ return  [
         "photo" => "https://s.dottori.it/uploads/img/68b6ab/7a/945862/bf9df9_5b0ec_c0d54.jpg",
         "cv" => "lorem ipsum" ,
         "email"=> "gianna.seghenzali@gmail.com",
-        "password"=> "gianna-dot",
+        "password"=> "$2y$10$"."PW7F0oA2Mi1rgTz73UhOg.LpGGDbh0hdiM6LVOmFHkBf5jTwGdcdW",
         "remember_token"=> "sass",
     ],
 
-    
+
 ];

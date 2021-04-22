@@ -8,7 +8,7 @@ class Message extends Model
 {
 
     protected $fillable = [
-        'doctor_id', 'name_user', 'surname_user', 'telephone_user', 'message_user'
+        'doctor_id', 'name_user', 'surname_user', 'mail_user', 'message_user'
     ];
 
 

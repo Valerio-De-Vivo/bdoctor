@@ -39,6 +39,6 @@ class User extends Authenticatable
 
     public function doctor()
     {
-        return $this->hasMany('App\Doctor');
+        return $this->hasOne('App\Doctor');
     }
 }

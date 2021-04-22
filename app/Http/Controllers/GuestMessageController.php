@@ -41,7 +41,7 @@ class GuestMessageController extends Controller
             'doctor_id'=>'required',
             'name_user'=>'required|max:50',
             'surname_user'=>'required|max:50',
-            'telephone_user'=>'required|max:15',
+            'mail_user'=>'required|max:100',
             'message_user'=>'required'
         ]);
 

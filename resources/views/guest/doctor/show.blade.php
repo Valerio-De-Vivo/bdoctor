@@ -49,8 +49,8 @@
                   <input type="text" class="form-control" id="surnameUser" name="surname_user" required>
                 </div>
                 <div class="col">
-                  <label for="phoneUser">Phone number</label>
-                  <input type="tel" class="form-control" id="phoneUser" name="telephone_user" required>
+                  <label for="mailUser">Email</label>
+                  <input type="email" class="form-control" id="mailUser" name="mail_user" required>
                 </div>
               </div>
             </div>
