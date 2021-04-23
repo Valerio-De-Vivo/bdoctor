@@ -14,6 +14,10 @@
         <li>
             <a class=" {{ (Request::route()->getName() == 'statistics.index') ? 'active-dash' : '' }} " href="{{ route('statistics.index')}}"><i class="fas fa-chart-pie"></i> Statistiche</a>
         </li>
+
+        <li>
+            <a class=" {{ (Request::route()->getName() == 'statistics.index') ? 'active-dash' : '' }} " href="#"><i class="fas fa-chart-pie"></i> Completa profilo</a>
+        </li>
     </ul>
 
 

@@ -67,19 +67,22 @@
 
             <img :src=" contact.photo " alt="Dottore">
             
-            <h1>@{{ contact.name }}<br>@{{ contact.surname }}</h1>
+            <h2>@{{ contact.name }} @{{ contact.surname }}</h2>
 
             <div class="card-info">
-              <p><i class="fas fa-map-marker-alt"></i> @{{ contact.city }}</p>
-              <p><i class="fas fa-phone"></i> @{{ contact.telephone }}</p>
+              <span><i class="fas fa-map-marker-alt"></i> <p>@{{ contact.city }}</p> </span>
+              <span><i class="fas fa-phone"></i> <p>@{{ contact.telephone }}</p> </span>
             </div>
+            <p style="color: #168aad;">Ultime recensioni ricevute</p>
 
             {{-- RECENSIONI  --}}
-            <div v-for="rev in review">
-              <div v-if="rev.doctor_id == contact.id">
-                <p> @{{rev.name_user}} </p>
-                <i v-for="n in rev.vote_user" class="fas fa-star"></i>
-              </div>
+            <div class="rev-container">
+              <div v-for="rev in review">
+                <div class="rev" v-if="rev.doctor_id == contact.id">
+                  <p> @{{rev.name_user}} </p>
+                  <i v-for="n in rev.vote_user" class="fas fa-star"></i>
+                </div>
+            </div>
             
             </div>
             <div class="card-btn">
