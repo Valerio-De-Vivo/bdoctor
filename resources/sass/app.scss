@@ -33,6 +33,18 @@ html {
     color: white !important;
 }
 
+.verde {
+    background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
+    text-shadow: 0 0 10px #184e7749;
+    color: white !important;
+}
+
+.blu {
+    background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
+    text-shadow: 0 0 10px #184e7749;
+    color: white !important;
+}
+
 .btn.green:hover {
     background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
     text-shadow: 0 0 0 #76c893;
@@ -341,23 +353,27 @@ button {
         }
 
         .rev-container {
-            height: 100px;
+            height: 70px;
             overflow-y: auto;
             width: 80%;
             margin: auto;
+
+            .rev {
+                display: flex;
+                margin: 5px 0;
+
+                p {
+                    margin: 0 5px;
+                }
+
+                i {
+                    color: orange;
+                }
+            }
         }
 
-        .rev {
-            display: flex;
-            margin: 5px 0;
-
-            p {
-                margin: 0 5px;
-            }
-
-            i {
-                color: orange;
-            }
+        .card-btn {
+            margin-top: 20px;
         }
     }
 }

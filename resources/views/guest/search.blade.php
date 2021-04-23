@@ -82,16 +82,17 @@
                   <p> @{{rev.name_user}} </p>
                   <i v-for="n in rev.vote_user" class="fas fa-star"></i>
                 </div>
+              </div>
             </div>
-            
-            </div>
+
+            {{-- CTA  --}}
             <div class="card-btn">
-              <div class="card-btn-link">
-                Scheda dottore
-              </div>
-              <div class="card-btn-link">
-                Richiedi disponibilità
-              </div>
+              <a class="btn verde" href="">
+                Scheda Dottore
+              </a>
+              <a class="btn blu" href="">
+                Richiedi Disponibilità
+              </a>  
             </div>
           </div>
           <div class="overlay"></div>

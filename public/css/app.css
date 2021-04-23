@@ -34,6 +34,18 @@ html {
   color: white !important;
 }
 
+.verde {
+  background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
+  text-shadow: 0 0 10px #184e7749;
+  color: white !important;
+}
+
+.blu {
+  background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
+  text-shadow: 0 0 10px #184e7749;
+  color: white !important;
+}
+
 .btn.green:hover {
   background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
   text-shadow: 0 0 0 #76c893;
@@ -299,20 +311,23 @@ button {
   color: #168aad;
 }
 .container-doc .card-doc .rev-container {
-  height: 100px;
+  height: 70px;
   overflow-y: auto;
   width: 80%;
   margin: auto;
 }
-.container-doc .card-doc .rev {
+.container-doc .card-doc .rev-container .rev {
   display: flex;
   margin: 5px 0;
 }
-.container-doc .card-doc .rev p {
+.container-doc .card-doc .rev-container .rev p {
   margin: 0 5px;
 }
-.container-doc .card-doc .rev i {
+.container-doc .card-doc .rev-container .rev i {
   color: orange;
+}
+.container-doc .card-doc .card-btn {
+  margin-top: 20px;
 }
 
 /*!
