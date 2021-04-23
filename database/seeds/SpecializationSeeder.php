@@ -12,13 +12,15 @@ class SpecializationSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 10; $i++) { 
 
-            $specializzazioni = ['Ematologia' , 'Dermatologia' , 'Nefrologia', 'Chirurgia', 'Ortopedia', 'Neurochirurgia', 'Cardiochirurgia' ,'Radioterapia' , 'Farmacologia', 'Oncologia' , 'Pediatria' , 'Odontoiatria' , 'Ginecologia', 'Fisioterapia'];
+        $specializzazioni = ['Ematologia' , 'Dermatologia' , 'Nefrologia', 'Chirurgia', 'Ortopedia', 'Neurochirurgia', 'Cardiochirurgia' ,'Radioterapia' , 'Farmacologia', 'Oncologia' , 'Pediatria' , 'Odontoiatria' , 'Ginecologia', 'Fisioterapia'];
 
+        foreach ($specializzazioni as $element) {
             $new_specialization = new Specialization();
-            $new_specialization->specialization = $specializzazioni[$i];
+            $new_specialization-> specialization = $element;
+
             $new_specialization->save();
+
         }
     }
 }

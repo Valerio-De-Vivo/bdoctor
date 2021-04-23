@@ -13,13 +13,15 @@ class PerformanceSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 10; $i++) { 
 
-            $performance = ['Remoto' , 'Studio'] ;
+        $performance = ['Remoto' , 'Studio'] ;
 
+        foreach ($performance as $element) {
             $new_performance = new Performance();
-            $new_performance->performance = $performance[ rand(0,1) ];
+            $new_performance-> performance = $element;
+
             $new_performance->save();
+
         }
     }
 }

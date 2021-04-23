@@ -52,7 +52,7 @@ class DoctorController extends Controller
           'dati_dottore' => $profilo
         ];
 
-        return view('admin.info', $data);
+        return view('admin.create', $data);
     }
 
     /**
@@ -69,19 +69,19 @@ class DoctorController extends Controller
 
         $request->validate(
             [
-              'name'=>'required|max:50',
-              'surname'=>'required|max:50',
-              'address'=>'required|max:200',
-              'city'=>'required|max:100',
-              'telephone'=>'required|max:15',
+                'address'=>'required|max:200',
+                'city'=>'required|max:100',
+                'specialization'=>'required',
             ]);
 
+        $data_doctor = Doctor::find($id);
         $newDoctor = new Doctor();
 
-        $newDoctor->user_id= $id;
+        $newDoctor->user_id = $id;
+        
+        $newDoctor->name = $data_doctor-> name;
+        $newDoctor->surname = $data_doctor-> surname;
 
-        $cv = Storage::put('cv', $data['cv']);
-        $data['cv'] = $cv;
 
         $newDoctor->fill($data);
 
@@ -95,7 +95,7 @@ class DoctorController extends Controller
             $newDoctor->perfomances()->sync($data['performances']);
         }
 
-        return redirect()->route('admin.profile')->with('status', 'Benvenuto');
+        return redirect()->route('crea-dottore')->with('status', 'Modifiche aggiornate');
     }
 
     /**
@@ -130,12 +130,12 @@ class DoctorController extends Controller
 
         $data =
         [
-          'doctor' => $doctor,
+          'dati_dottore' => $doctor,
           'specializations' => $specialization,
-          'performances' => $performance,
+          'performance' => $performance,
         ];
 
-        return view('admin.info',$data);
+        return view('admin.create',$data);
     }
 
     /**
@@ -147,26 +147,19 @@ class DoctorController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $doctor = Doctor::find($id);
 
         $data = $request->all();
 
         $request->validate(
             [
-              'name'=>'required|max:50',
-              'surname'=>'required|max:50',
               'address'=>'required|max:200',
               'city'=>'required|max:100',
-              'telephone'=>'required|max:20',
+              'specialization'=>'required',
             ]);
 
-        if(array_key_exists('cv',$data)){
-            $cv = Storage::put('cv', $data['cv']);
-            $data['cv'] = $cv;
-        }
-
         $doctor->update($data);
-
         if(array_key_exists('specializations',$data)){
             $doctor->specializations()->sync($data['specializations']);
           }
@@ -175,7 +168,7 @@ class DoctorController extends Controller
             $doctor->perfomances()->sync($data['perfomances']);
           }
 
-        return redirect()->route('admin.profile')->with('status','Modificato');
+        return redirect()->route('crea-dottore')->with('status','Modifiche aggiornate');
     }
 
     /**

@@ -16,7 +16,7 @@
         </li>
 
         <li>
-            <a class=" {{ (Request::route()->getName() == 'statistics.index') ? 'active-dash' : '' }} " href="#"><i class="fas fa-chart-pie"></i> Completa profilo</a>
+            <a class=" {{ (Request::route()->getName() == 'crea-dottore') ? 'active-dash' : '' }} " href="{{ route('crea-dottore', $dati_dottore->id) }}"><i class="fas fa-chart-pie"></i> Completa profilo</a>
         </li>
     </ul>
 

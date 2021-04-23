@@ -38,11 +38,13 @@ Route::prefix('admin')
 ->group(function () {
 
 Route::get('/', 'DoctorController@index')->name('dashboard-dottore');
-Route::get('/profilo', 'DoctorController@create')->name('profilo-dottore');
+// Route::get('/profilo', 'DoctorController@create')->name('profilo-dottore');
 Route::get('/sponsorizzazioni', function () {return view('admin.sponsor');})->name('sponsorizzazioni-dottore');
 
 // Rotta profilo
 Route::resource('/doctor', 'DoctorController');
+Route::get('/create/{id}', 'DoctorController@edit')->name('crea-dottore');
+Route::post('/create/{id}', 'DoctorController@update')->name('crea-dottore');
 // Rotta messaggio
 Route::get('/message', 'AdminMessageController@index')->name('admin.message');
 Route::delete('/message/{mess}', 'AdminMessageController@destroy')->name('message.destroy');
