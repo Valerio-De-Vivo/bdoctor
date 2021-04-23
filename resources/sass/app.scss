@@ -310,23 +310,28 @@ button {
 .container-doc {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     padding: 30px;
+
+    &::after {
+        content: "";
+        flex: auto;
+    }
 
     .card-doc {
         box-shadow: 2px 2px 2px rgb(232, 232, 232);
-        width: 22%;
-        margin: 20px 0;
+        width: calc(25% - 40px);
+        margin: 20px;
         text-align: center;
         border-radius: 0.25rem;
         padding: 20px;
         color: #184e77;
 
         img {
-            width: 100%;
+            width: 200px;
             height: 200px;
             object-fit: cover;
-            border-radius: 0.25rem;
+            border-radius: 50%;
         }
 
         h2 {
@@ -374,6 +379,115 @@ button {
 
         .card-btn {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-self: flex-end;
+
+            a {
+                display: inline-block;
+                width: calc(50% - 10px);
+                margin: 0 5px;
+            }
+        }
+    }
+}
+
+//.. PAGINA DOTTORE SINGOLO
+
+.container-single {
+    min-height: calc(100vh - 170px);
+    background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
+    padding: 10px 20px;
+    display: flex;
+
+    .header-doc {
+        display: flex;
+        align-items: center;
+        padding: 40px;
+
+        .foto {
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        .col-doc {
+            padding: 5%;
+            color: white;
+            h1 {
+                font-size: 4rem;
+                color: #ffff;
+                border-bottom: 2px solid #76c893;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .cv {
+        padding: 0 40px;
+        color: white;
+        line-height: 1.4;
+        font-size: 1.2rem;
+
+        h3 {
+            // border-bottom: 2px solid #76c893;
+            margin-bottom: 15px;
+            color: #76c893;
+        }
+    }
+
+    .info {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 0.25rem;
+        box-shadow: 2px 2px 4px #184e77;
+
+        h2 {
+            font-size: 2.5rem;
+            color: #168aad;
+            padding-top: 5%;
+        }
+
+        p {
+            padding: 5px 0;
+            color: #184e77;
+            line-height: 1.4;
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        i {
+            color: orange;
+        }
+    }
+}
+
+.contact {
+    min-height: 70px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 60px;
+        }
+
+        h4 {
+            font-size: 1.6rem;
+            color: #184e77;
+            margin-bottom: 0;
         }
     }
 }

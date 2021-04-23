@@ -216,13 +216,17 @@ var app = new Vue({
       });
     });
   },
-  created: function created() {// this.filtered = this.contacts;
+  computed: {
+    link: function link() {
+      return '/doctor';
+    } // this.filtered = this.contacts;
     // this.nRisultato = this.filtered.length;
     // this.contacts.forEach((element, i) => {
     //   if (!this.cittaDisponibili.includes(element.citta)) {
     //     this.cittaDisponibili.push(element.citta)
     //   }
     // });
+
   },
   methods: {
     doctorFilter: function doctorFilter(event) {
@@ -273,7 +277,8 @@ var app = new Vue({
       this.nRisultato = this.filtered.length;
     }
   }
-}); // require('./bootstrap');
+});
+var ctx = 'myChart'; // require('./bootstrap');
 
 /***/ }),
 

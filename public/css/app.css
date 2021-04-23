@@ -272,24 +272,27 @@ button {
 .container-doc {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   padding: 30px;
+}
+.container-doc::after {
+  content: "";
+  flex: auto;
 }
 .container-doc .card-doc {
   box-shadow: 2px 2px 2px #e8e8e8;
-  width: 22%;
-  margin: 20px 0;
+  width: calc(25% - 40px);
+  margin: 20px;
   text-align: center;
   border-radius: 0.25rem;
   padding: 20px;
   color: #184e77;
 }
 .container-doc .card-doc img {
-  width: 100%;
+  width: 200px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 0.25rem;
+  border-radius: 50%;
 }
 .container-doc .card-doc h2 {
   font-size: 2rem;
@@ -328,6 +331,97 @@ button {
 }
 .container-doc .card-doc .card-btn {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-end;
+}
+.container-doc .card-doc .card-btn a {
+  display: inline-block;
+  width: calc(50% - 10px);
+  margin: 0 5px;
+}
+
+.container-single {
+  min-height: calc(100vh - 170px);
+  background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
+  padding: 10px 20px;
+  display: flex;
+}
+.container-single .header-doc {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+.container-single .header-doc .foto img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.container-single .header-doc .col-doc {
+  padding: 5%;
+  color: white;
+}
+.container-single .header-doc .col-doc h1 {
+  font-size: 4rem;
+  color: #ffff;
+  border-bottom: 2px solid #76c893;
+}
+.container-single .header-doc .col-doc h2 {
+  font-size: 2.5rem;
+}
+.container-single .cv {
+  padding: 0 40px;
+  color: white;
+  line-height: 1.4;
+  font-size: 1.2rem;
+}
+.container-single .cv h3 {
+  margin-bottom: 15px;
+  color: #76c893;
+}
+.container-single .info {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 4px #184e77;
+}
+.container-single .info h2 {
+  font-size: 2.5rem;
+  color: #168aad;
+  padding-top: 5%;
+}
+.container-single .info p {
+  padding: 5px 0;
+  color: #184e77;
+  line-height: 1.4;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.container-single .info i {
+  color: orange;
+}
+
+.contact {
+  min-height: 70px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact div img {
+  height: 60px;
+}
+.contact div h4 {
+  font-size: 1.6rem;
+  color: #184e77;
+  margin-bottom: 0;
 }
 
 /*!

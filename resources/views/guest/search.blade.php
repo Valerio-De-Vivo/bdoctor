@@ -87,11 +87,11 @@
 
             {{-- CTA  --}}
             <div class="card-btn">
-              <a class="btn verde" href="">
-                Scheda Dottore
+              <a class="btn verde" :href=" link + '/' + contact.id ">
+                Dettagli
               </a>
-              <a class="btn blu" href="">
-                Richiedi Disponibilità
+              <a class="btn blu" :href=" link + '/' + contact.id + '/#disponibilita' ">
+                Messaggio
               </a>  
             </div>
           </div>

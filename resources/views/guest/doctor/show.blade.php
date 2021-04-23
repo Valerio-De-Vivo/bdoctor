@@ -26,13 +26,112 @@
             </div>
         @endif
 
-        <div class="container">
+        <div class="container-single">
 
-          <h1>{{$profile->id}}</h1>
+          <div class="col-md-8">
+
+            <div class="header-doc">
+              <div class="foto">
+                <img src=" {{$profile->photo}} " alt="">
+              </div>
+              <div class="col-doc">
+                <h1>{{$profile->name}} {{$profile->surname}}</h1>
+                <h2> {{$specialization->specialization}} </h2>
+              </div>
+            </div>
+
+            <div class="cv">
+              <h3>Esperienza</h3>
+              <p> {{$profile->cv}} </p>
+            </div>
+          </div>
+
+          <div style="align-self: center" class="col-md-4">
+            <div class="info">
+              <h2>Info</h2>
+              <p> Prestazione in {{$performance->performance}}</p>
+
+              <h2>Recensioni</h2>
+
+              @for ($i = 0; $i < $rev->vote_user; $i++)
+                <i class="fas fa-star"></i>
+              @endfor
+                <p> {{$rev->name_user}} {{$rev->surname_user}}: {{$rev->review_user}}</p>
+
+                <h2>Lascia una recensione</h2>
+                <form action="{{url('/review')}}" method="post">
+                  @csrf
+                  @method('POST')
+                  <div class="form-group">
+                    <input type="text" class="d-none" value="{{$profile->id}}" name="doctor_id" required>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col">
+                        <label for="nameUser">Nome</label>
+                        <input type="text" class="form-control" id="nameUser" name="name_user" required>
+                      </div>
+                      <div class="col">
+                        <label for="surnameUser">Cognome</label>
+                        <input type="text" class="form-control" id="surnameUser" name="surname_user" required>
+                      </div>
+                      <div class="col">
+                        <label for="voto">Voto</label>
+                          <select class="form-control" id="voto" name="vote_user">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                        <label for="recensione" class="d-block">Recensione</label>
+                        <textarea style="width: 100%" id="recensione" name="review_user" ></textarea>
+                  </div>
+                  <button type="submit" class="btn blu">Invia</button>
+                </form>
+                
+              
+            </div>
+          </div>
+
+        </div>
+
+
+        {{-- BANNER CONTATTI  --}}
+        <div class="contact">
+              <div class="col-md-4">
+                <img src="{{ asset('img/common/location.png') }}" alt="">
+                <h4> {{$profile->address}}, {{$profile->city}} </h4>
+              </div>
+              <div class="col-md-4">
+                <img src="{{ asset('img/common/telephone.png') }}" alt="">
+                <h4> {{$profile->telephone}} </h4>
+
+              </div>
+              <div class="col-md-4">
+                <img src="{{ asset('img/common/mail.png') }}" alt="">
+                <h4> {{$profile->user->email}} </h4>
+
+              </div>
+        </div>
+
+    </body>
+
+</html>
+
+
+
+          {{-- <h1>{{$profile->id}}</h1>
           <h2>{{$profile->name}}</h2>
           <h2>{{$profile->surname}}</h2>
-          <h3>Richiesta disponibilità</h3>
-          <form action="{{url('/message')}}" method="post">
+          <h3>Richiesta disponibilità</h3> --}}
+
+          {{-- FORM MESSAGGIO  --}}
+          {{-- <form action="{{url('/message')}}" method="post">
             @csrf
             @method('POST')
             <div class="form-group">
@@ -59,10 +158,10 @@
               <textarea id="message" name="message_user" rows="8" cols="100" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Invia</button>
-          </form>
+          </form> --}}
 
-          <h3>Recensione</h3>
-          <form action="{{url('/review')}}" method="post">
+          {{-- FORM RECENSIONE  --}}
+          {{-- <form action="{{url('/review')}}" method="post">
             @csrf
             @method('POST')
             <div class="form-group">
@@ -99,9 +198,4 @@
               </div>
             </div>
             <button type="submit" class="btn btn-primary">Invia</button>
-          </form>
-        </div>
-
-    </body>
-
-</html>
+          </form> --}}

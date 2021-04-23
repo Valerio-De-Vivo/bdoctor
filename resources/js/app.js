@@ -133,7 +133,11 @@ var app = new Vue({
 
     });
   },
-  created(){
+  computed: {
+
+    link(){
+      return '/doctor';
+    }
 
     // this.filtered = this.contacts;
     // this.nRisultato = this.filtered.length;

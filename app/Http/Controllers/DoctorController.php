@@ -7,7 +7,7 @@ use App\Advertise;
 use App\Message;
 use App\Review;
 use App\Specialization;
-use App\Perfomance;
+use App\Performance;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
@@ -32,9 +32,15 @@ class DoctorController extends Controller
     {
 
         $doctor = Doctor::find($id);
+        $spec = Specialization::find($id);
+        $perf = Performance::find($id);
+        $rev = Review::find($id);
 
         $data = [
             'profile' => $doctor,
+            'specialization' => $spec,
+            'performance' => $perf,
+            'rev' => $rev
         ];
 
         return view ('guest.doctor.show',$data);
