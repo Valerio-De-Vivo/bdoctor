@@ -12,7 +12,7 @@
             <a class=" {{ (Request::route()->getName() == 'review.index') ? 'active-dash' : '' }} " href="{{ route('review.index')}}"><i class="fas fa-star"></i> Recensioni</a>
         </li>
         <li>
-            <a class=" {{ (Request::route()->getName() == 'statistics.index') ? 'active-dash' : '' }} " href="{{ route('statistics.index')}}"><i class="fas fa-chart-pie"></i> Statistiche</a>
+            <a class=" {{ (Request::route()->getName() == 'admin.statistics') ? 'active-dash' : '' }} " href="{{ route('admin.statistics')}}"><i class="fas fa-chart-pie"></i> Statistiche</a>
         </li>
 
         <li>

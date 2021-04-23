@@ -14,7 +14,7 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        //
+      
     }
 
     /**
@@ -50,7 +50,7 @@ class ReviewController extends Controller
 
         $newReview->save();
 
-        return redirect()->route('show.doctors')->with('review', 'Inviata');
+        return redirect()->route('show.doctor', ['id' => $newReview->doctor_id])->with('status', 'Recensione salvata');
     }
 
     /**

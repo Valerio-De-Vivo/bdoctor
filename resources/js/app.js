@@ -104,7 +104,7 @@ var app = new Vue({
     review: [],
     specialization: []
   },
-  
+
   mounted: function mounted(){
 
     var _this = this;
@@ -125,7 +125,7 @@ var app = new Vue({
 
         _this.contacts.forEach( function(element) {
 
-          
+
           if (!_this.cittaDisponibili.includes(element.city)) {
             _this.cittaDisponibili.push(element.city)
           }
@@ -144,7 +144,7 @@ var app = new Vue({
     // });
   },
   methods: {
-    
+
     doctorFilter(event) {
       this.eventMemo = event.target.value;
       this.filtered = [];
@@ -186,4 +186,7 @@ var app = new Vue({
     }
   }
 });
+
+var ctx = 'myChart';
+
 // require('./bootstrap');

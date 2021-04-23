@@ -23,14 +23,9 @@ Route::get('/ricerca', function () {return view('guest.search');})->name('ricerc
 Route::get('/doctor', 'DoctorController@index')->name('show.doctors');
 // Collegamento dottori
 Route::get('/doctor/{id}','DoctorController@showProfile')->name('show.doctor');
-// Ricerca per città
-// Route::post('/search','DoctorController@search')->name('search');
-// Da controllare
-// Inivio messaggio guest
-Route::resource('/send_message', 'GuestMessageController');
-Route::post('/doctor/{id', 'GuestMessageController@store')->name('guest.doctor.show');
-// Inivio recensione guest
-Route::resource('/send_review', 'ReviewController');
+// Recensioni e messaggi
+Route::post('/message','GuestMessageController@store');
+Route::post('/review', 'ReviewController@store');
 
 Auth::routes();
 
@@ -54,5 +49,6 @@ Route::delete('/message/{mess}', 'AdminMessageController@destroy')->name('messag
 // Rotta recensioni
 Route::resource('/review', 'AdminReviewController');
 // Rotta statistiche
-Route::resource('/statistics', 'AdminStatisticsController');
+Route::resource('/statistics', 'chartController');
+Route::get('/statistics', 'chartController@index')->name('admin.statistics');
 });

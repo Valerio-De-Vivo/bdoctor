@@ -31,8 +31,8 @@
           <h1>{{$profile->id}}</h1>
           <h2>{{$profile->name}}</h2>
           <h2>{{$profile->surname}}</h2>
-
-          <form action="{{route('guest.doctor.show')}}" method="post">
+          <h3>Richiesta disponibilità</h3>
+          <form action="{{url('/message')}}" method="post">
             @csrf
             @method('POST')
             <div class="form-group">
@@ -57,6 +57,46 @@
             <div class="form-group">
               <label for="message" class="d-block">Message</label>
               <textarea id="message" name="message_user" rows="8" cols="100" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Invia</button>
+          </form>
+
+          <h3>Recensione</h3>
+          <form action="{{url('/review')}}" method="post">
+            @csrf
+            @method('POST')
+            <div class="form-group">
+              <input type="text" class="d-none" value="{{$profile->id}}" name="doctor_id" required>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="nameUser">Nome</label>
+                  <input type="text" class="form-control" id="nameUser" name="name_user" required>
+                </div>
+                <div class="col">
+                  <label for="surnameUser">Cognome</label>
+                  <input type="text" class="form-control" id="surnameUser" name="surname_user" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="voto">Voto</label>
+                    <select class="form-control" id="voto" name="vote_user">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="col">
+                  <label for="recensione" class="d-block">Recensione</label>
+                  <textarea id="recensione" name="review_user" rows="8" cols="100"></textarea>
+                </div>
+              </div>
             </div>
             <button type="submit" class="btn btn-primary">Invia</button>
           </form>
