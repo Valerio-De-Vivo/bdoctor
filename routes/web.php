@@ -43,8 +43,8 @@ Route::get('/sponsorizzazioni', function () {return view('admin.sponsor');})->na
 
 // Rotta profilo
 Route::resource('/doctor', 'DoctorController');
-Route::get('/create/{id}', 'DoctorController@edit')->name('crea-dottore');
-Route::post('/create/{id}', 'DoctorController@update')->name('crea-dottore');
+Route::get('/create', 'DoctorController@edit')->name('crea-dottore');
+Route::post('/create', 'DoctorController@update')->name('crea-dottore');
 // Rotta messaggio
 Route::get('/message', 'AdminMessageController@index')->name('admin.message');
 Route::delete('/message/{mess}', 'AdminMessageController@destroy')->name('message.destroy');
