@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
@@ -43,7 +45,11 @@
             <div class="cv">
               <h3>Esperienza</h3>
               <p> {{$profile->cv}} </p>
+
+              <a class="btn blu" href="#disponibilita">Contatta il medico {{$profile->surname}} </a>
             </div>
+
+
           </div>
 
           <div style="align-self: center" class="col-md-4">
@@ -91,7 +97,7 @@
                         <label for="recensione" class="d-block">Recensione</label>
                         <textarea style="width: 100%" id="recensione" name="review_user" ></textarea>
                   </div>
-                  <button type="submit" class="btn blu">Invia</button>
+                  <button type="submit" class="btn green">Invia</button>
                 </form>
                 
               
@@ -118,6 +124,45 @@
 
               </div>
         </div>
+
+        {{-- FORM MESSAGGIO  --}}
+
+        <div id="disponibilita" class=" mex-container">
+          <div class="col-md-8">
+            <h2>Qui puoi inviare un messaggio direttamente al dott {{$profile->surname}}</h2>
+            <form action="{{url('/message')}}" method="post">
+              @csrf
+              @method('POST')
+              <div class="form-group">
+                <input type="text" class="d-none" value="{{$profile->id}}" name="doctor_id" required>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col">
+                    <label for="nameUser">Nome</label>
+                    <input type="text" class="form-control" id="nameUser" name="name_user" required>
+                  </div>
+                  <div class="col">
+                    <label for="surnameUser">Cognome</label>
+                    <input type="text" class="form-control" id="surnameUser" name="surname_user" required>
+                  </div>
+                  <div class="col">
+                    <label for="mailUser">Email</label>
+                    <input type="email" class="form-control" id="mailUser" name="mail_user" required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="d-block">Messaggio</label>
+                <textarea id="message" style="width: 100%; min-height: 300px" name="message_user" required></textarea>
+              </div>
+              <button type="submit" class="btn blu">Invia</button>
+            </form>
+          </div>
+
+          <img src=" {{ asset('img/common/banner-search.png') }} " alt="">
+        </div>
+
 
     </body>
 

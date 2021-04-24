@@ -381,6 +381,13 @@ button {
   margin-bottom: 15px;
   color: #76c893;
 }
+.container-single .cv a {
+  display: block;
+  width: 40%;
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
 .container-single .info {
   padding: 20px;
   background-color: #fff;
@@ -388,7 +395,7 @@ button {
   box-shadow: 2px 2px 4px #184e77;
 }
 .container-single .info h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #168aad;
   padding-top: 5%;
 }
@@ -422,6 +429,27 @@ button {
   font-size: 1.6rem;
   color: #184e77;
   margin-bottom: 0;
+}
+
+.mex-container {
+  min-height: calc(100vh - 70px);
+  padding: 10% 10% 0 70px;
+  background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
+  color: #fff;
+  position: relative;
+}
+.mex-container h2 {
+  color: #76c893;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.mex-container form {
+  z-index: 3;
+}
+.mex-container img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 /*!
