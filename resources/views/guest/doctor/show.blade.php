@@ -48,11 +48,11 @@
 
               <a class="btn blu" href="#disponibilita">Contatta il medico {{$profile->surname}} </a>
             </div>
-
-
           </div>
 
-          <div style="align-self: center" class="col-md-4">
+          {{-- BANNER INFO  --}}
+
+          <div id="app" style="align-self: center" class="col-md-4">
             <div class="info">
               <h2>Info</h2>
               <p> Prestazione in {{$performance->performance}}</p>
@@ -64,41 +64,43 @@
               @endfor
                 <p> {{$rev->name_user}} {{$rev->surname_user}}: {{$rev->review_user}}</p>
 
-                <h2>Lascia una recensione</h2>
-                <form action="{{url('/review')}}" method="post">
-                  @csrf
-                  @method('POST')
-                  <div class="form-group">
-                    <input type="text" class="d-none" value="{{$profile->id}}" name="doctor_id" required>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-row">
-                      <div class="col">
-                        <label for="nameUser">Nome</label>
-                        <input type="text" class="form-control" id="nameUser" name="name_user" required>
-                      </div>
-                      <div class="col">
-                        <label for="surnameUser">Cognome</label>
-                        <input type="text" class="form-control" id="surnameUser" name="surname_user" required>
-                      </div>
-                      <div class="col">
-                        <label for="voto">Voto</label>
-                          <select class="form-control" id="voto" name="vote_user">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                          </select>
+                <h2 @click="recensione"> <i class="fas fa-angle-down"></i> Lascia una recensione </h2>
+                <transition name="slide">
+                  <form v-if="lasciaRecensione" action="{{url('/review')}}" method="post">
+                    @csrf
+                    @method('POST')
+                    <div class="form-group">
+                      <input type="text" class="d-none" value="{{$profile->id}}" name="doctor_id" required>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="nameUser">Nome</label>
+                          <input type="text" class="form-control" id="nameUser" name="name_user" required>
+                        </div>
+                        <div class="col">
+                          <label for="surnameUser">Cognome</label>
+                          <input type="text" class="form-control" id="surnameUser" name="surname_user" required>
+                        </div>
+                        <div class="col">
+                          <label for="voto">Voto</label>
+                            <select class="form-control" id="voto" name="vote_user">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="form-group">
-                        <label for="recensione" class="d-block">Recensione</label>
-                        <textarea style="width: 100%" id="recensione" name="review_user" ></textarea>
-                  </div>
-                  <button type="submit" class="btn green">Invia</button>
-                </form>
+                    <div class="form-group">
+                          <label for="recensione" class="d-block">Recensione</label>
+                          <textarea style="width: 100%"  id="recensione" name="review_user" ></textarea>
+                    </div>
+                    <button type="submit" class="btn green">Invia</button>
+                  </form>
+                </transition>
                 
               
             </div>
@@ -165,6 +167,8 @@
 
 
     </body>
+
+    <script src=" {{ asset('js/app.js') }} "></script>
 
 </html>
 

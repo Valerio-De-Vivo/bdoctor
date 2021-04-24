@@ -398,6 +398,7 @@ button {
   font-size: 2.2rem;
   color: #168aad;
   padding-top: 5%;
+  cursor: pointer;
 }
 .container-single .info p {
   padding: 5px 0;
@@ -408,6 +409,24 @@ button {
 }
 .container-single .info i {
   color: orange;
+}
+.container-single .info .slide-enter-active {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+.container-single .info .slide-leave-active {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.container-single .info .slide-enter-to,
+.container-single .info .slide-leave {
+  max-height: 100px;
+  overflow: hidden;
+}
+.container-single .info .slide-enter,
+.container-single .info .slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
 }
 
 .contact {

@@ -2,98 +2,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    // contacts: [
-    //   {
-    //     name: 'Bernardo Rocco',
-    //     nome: 'Bernardo',
-    //     cognome: 'Rocco',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Modena',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Herbert Schoenhuber',
-    //     nome: 'Herbert',
-    //     cognome: 'Schoenhuber',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Milano',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Claudio Corbellini',
-    //     nome: 'Claudio',
-    //     cognome: 'Corbellini',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Bologna',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Patrizia Boni',
-    //     nome: 'Patrizia',
-    //     cognome: 'Boni',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Milano',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Silvia Simonetti',
-    //     nome: 'Silvia',
-    //     cognome: 'Simonetti',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Milano',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Alberto Vaiarelli',
-    //     nome: 'Alberto',
-    //     cognome: 'Vaiarelli',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Viterbo',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Andrea Lenzi',
-    //     nome: 'Andrea',
-    //     cognome: 'Lenzi',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Roma',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Ernesta Petrangeli',
-    //     nome: 'Ernesta',
-    //     cognome: 'Petrangeli',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Roma',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Annalisa Limosani',
-    //     nome: 'Annalisa',
-    //     cognome: 'Limosani',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Firenze',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    //   {
-    //     name: 'Simona Monilari',
-    //     nome: 'Simona',
-    //     cognome: 'Monilari',
-    //     bio: 'Laureato a pieni voti in chirurgia, specializzato in specializzazione e operante a Milano',
-    //     citta: 'Milano',
-    //     telefono: '+39 366 1234567',
-    //     valutazione: '<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>'
-    //   },
-    // ],
+    lasciaRecensione: false,
     filtered: [],
     newFilter: '',
     cittaDisponibili: [],
@@ -138,16 +47,12 @@ var app = new Vue({
     link(){
       return '/doctor';
     }
-
-    // this.filtered = this.contacts;
-    // this.nRisultato = this.filtered.length;
-    // this.contacts.forEach((element, i) => {
-    //   if (!this.cittaDisponibili.includes(element.citta)) {
-    //     this.cittaDisponibili.push(element.citta)
-    //   }
-    // });
   },
   methods: {
+
+    recensione(){
+      this.lasciaRecensione = !this.lasciaRecensione
+    },
 
     doctorFilter(event) {
       this.eventMemo = event.target.value;
