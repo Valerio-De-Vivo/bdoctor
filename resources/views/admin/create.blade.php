@@ -18,7 +18,7 @@
             </ul>
         </div>
         @endif
-        <form class="col-md-8" method="post" action="{{url('admin/create/'.$dati_dottore->id)}}" enctype="multipart/form-data">
+        <form class="col-md-8" method="post" action="{{url('admin/create')}}" enctype="multipart/form-data">
         @method('POST')
         @csrf
 
@@ -41,10 +41,10 @@
                         <input class="form-check-input" type="checkbox" id="{{$spec->id}}" value="{{$spec->specialization}}" name='specialization'>
                         {{--  {{$dati_dottore->id->contains($specializations->id) ? 'checked' : '' }}--}}
                         <label class="form-check-label" for="{{$spec->id}}">{{$spec->specialization}}</label>
-                        
+
                     </div>
                 @endforeach
-                
+
             </div>
 
             <div class="mb-3 form-group">
@@ -56,10 +56,10 @@
 
                 <label class="form-label d-block">Prestazione:</label>
                 @foreach ($performance as $element)
-                    
+
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="{{$element->performance}}" name='performance'>
-                    <label class="form-check-label" for="inlineCheckbox1">{{$element->performance}}</label>
+                    <input class="form-check-input" type="checkbox" id="pres{{$element->id}}" value="{{$element->performance}}" name='performance'>
+                    <label class="form-check-label" for="pres{{$element->id}}">{{$element->performance}}</label>
                 </div>
                 @endforeach
             </div>
@@ -68,7 +68,7 @@
                 <label for="curriculum">Curriculum Vitae</label>
                 <textarea class="form-control" name="cv" rows="10" id="curriculum">{{$dati_dottore->cv}}</textarea>
             </div>
-            
+
             <div id="emailHelp" class="form-text mb-3">*: campo obbligatorio</div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

@@ -78,7 +78,7 @@ class DoctorController extends Controller
         $newDoctor = new Doctor();
 
         $newDoctor->user_id = $id;
-        
+
         $newDoctor->name = $data_doctor-> name;
         $newDoctor->surname = $data_doctor-> surname;
 
@@ -121,8 +121,9 @@ class DoctorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
+        $id = Auth::id();
         $doctor = Doctor::find($id);
 
         $specialization = Specialization::all();
@@ -145,9 +146,9 @@ class DoctorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-
+        $id = Auth::id();
         $doctor = Doctor::find($id);
 
         $data = $request->all();
