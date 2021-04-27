@@ -67,7 +67,7 @@
 
             <img :src=" contact.photo " alt="Dottore">
             
-            <h2>@{{ contact.name }} @{{ contact.surname }}</h2>
+            <h2>@{{ contact.name }} <br> @{{ contact.surname }}</h2>
 
             <div class="card-info">
               <span><i class="fas fa-map-marker-alt"></i> <p>@{{ contact.city }}</p> </span>

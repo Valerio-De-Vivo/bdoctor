@@ -279,7 +279,7 @@ button {
   flex: auto;
 }
 .container-doc .card-doc {
-  box-shadow: 2px 2px 2px #e8e8e8;
+  box-shadow: 2px 3px 2px #e8e8e8;
   width: calc(25% - 40px);
   margin: 20px;
   text-align: center;
@@ -469,6 +469,23 @@ button {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.my-container {
+  height: calc(100vh - 100px);
+  background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-container h1 {
+  font-size: 4rem;
+}
+.my-container h3 {
+  border-bottom: 2px solid #d9ed92;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 /*!
