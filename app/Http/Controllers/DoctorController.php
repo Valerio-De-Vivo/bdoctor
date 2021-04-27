@@ -34,7 +34,11 @@ class DoctorController extends Controller
         $doctor = Doctor::find($id);
         $spec = Specialization::find($id);
         $perf = Performance::find($id);
-        $rev = Review::find($id);
+        $rev = Review::where('doctor_id', '=', $id)->orderBy('created_at', 'desc')->get();
+        // $rev = Review::find($id);
+
+        // dd($rev);
+
 
         $data = [
             'profile' => $doctor,

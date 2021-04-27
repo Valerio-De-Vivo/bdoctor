@@ -350,7 +350,7 @@ button {
 .container-single .header-doc {
   display: flex;
   align-items: center;
-  padding: 40px;
+  padding: 20px 40px;
 }
 .container-single .header-doc .foto img {
   width: 200px;

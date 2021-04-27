@@ -55,14 +55,22 @@
           <div id="app" style="align-self: center" class="col-md-4">
             <div class="info">
               <h2>Info</h2>
-              <p> Prestazione in {{$performance->performance}}</p>
+              <p> Prestazione in 
+                @foreach ($profile->performance as $item)
+                    {{$item->performance}}
+                @endforeach
+              </p>
 
+
+              {{-- RECENSIONI  --}}
               <h2>Recensioni</h2>
 
-              @for ($i = 0; $i < $rev->vote_user; $i++)
-                <i class="fas fa-star"></i>
-              @endfor
-                <p> {{$rev->name_user}} {{$rev->surname_user}}: {{$rev->review_user}}</p>
+              @foreach ($rev as $revs)
+                @for ($i = 0; $i < $revs->vote_user; $i++)
+                  <i class="fas fa-star"></i>
+                @endfor
+                  <p> {{$revs->name_user}} {{$revs->surname_user}}: {{$revs->review_user}}</p>
+              @endforeach
 
                 <h2 @click="recensione"> <i class="fas fa-angle-down"></i> Lascia una recensione </h2>
                 <transition name="slide">
