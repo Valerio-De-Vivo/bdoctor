@@ -22,6 +22,10 @@
 
         pagina dottori
 
+
+        @include('layouts/partials/footer')
+
+
     </body>
 
 </html>

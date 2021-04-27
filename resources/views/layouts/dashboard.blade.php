@@ -26,12 +26,14 @@
   <div id="app">
 
     @include('layouts.partials.header')
-    <div class="container-dashboard">
+    <div style="min-height: calc(100vh - 100px)" class="container-dashboard">
         @include('layouts.partials.sidebar')
         @yield('content')
 
     </div>
   </div>
+  @include('layouts.partials.footer')
+  
   @yield('js')
 </body>
 </html>

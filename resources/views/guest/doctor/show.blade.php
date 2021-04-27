@@ -118,7 +118,7 @@
 
 
         {{-- BANNER CONTATTI  --}}
-        <div class="contact">
+        <div id="disponibilita" class="contact">
               <div class="col-md-4">
                 <img src="{{ asset('img/common/location.png') }}" alt="">
                 <h4> {{$profile->address}}, {{$profile->city}} </h4>
@@ -137,7 +137,7 @@
 
         {{-- FORM MESSAGGIO  --}}
 
-        <div id="disponibilita" class=" mex-container">
+        <div  class=" mex-container">
           <div class="col-md-8">
             <h2>Qui puoi inviare un messaggio direttamente al dott {{$profile->surname}}</h2>
             <form action="{{url('/message')}}" method="post">
@@ -175,6 +175,9 @@
 
 
     </body>
+
+    @include('layouts/partials/footer')
+
 
     <script src=" {{ asset('js/app.js') }} "></script>
 

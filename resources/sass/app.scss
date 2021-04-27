@@ -147,6 +147,22 @@ button {
     display: flex;
 }
 
+// ..FOOTER
+
+#contatti {
+    height: 300px;
+    background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    div {
+        height: 100%;
+        background-color: #fff;
+        border: 1px solid red;
+    }
+}
+
 // ..SIDEBAR
 
 .sidebar-dash {
@@ -578,6 +594,13 @@ button {
         margin-bottom: 20px;
         padding-bottom: 20px;
     }
+}
+
+// ..statistics page
+
+.card {
+    width: 40% !important;
+    margin: 30px 0;
 }
 
 // Variables

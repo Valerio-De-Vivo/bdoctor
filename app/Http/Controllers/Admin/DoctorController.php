@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Doctor;
 use App\Performance;
 use App\Specialization;
+use App\Review;
+use App\Message;
 
 class DoctorController extends Controller
 {
@@ -22,10 +24,16 @@ class DoctorController extends Controller
         $id = Auth::id();
 
         $profilo = Doctor::find($id);
+        $rev = Review::where('doctor_id', '=', $id)->orderBy('created_at', 'desc')->get();
+        $messages = Message::where('doctor_id', '=', $id)->orderBy('created_at', 'desc')->get();
+
 
         $data = [
-            'item' => $profilo
-          ];
+            'item' => $profilo,
+            'rev' => $rev,
+            'mess' => $messages
+
+        ];
 
         return view('admin.profile', $data);
     }

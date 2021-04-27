@@ -70,7 +70,7 @@
             </div>
 
             <div id="emailHelp" class="form-text mb-3">*: campo obbligatorio</div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn blu">Invia</button>
         </form>
     </main>
 @endsection

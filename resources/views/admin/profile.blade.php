@@ -1,7 +1,10 @@
 @extends('layouts.dashboard')
 
 @section('content')
-  <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 py-4 d-flex justify-content-around flex-wrap" style="margin-top: 120px;">
-      <h1> IN QUESTA PAGINA ATTERRA IL DOTTORE DOPO IL LOGIN</h1>
+  <main role="main" style="margin-top: 120px; color: #76c893">
+      <h1> Benvenuto nella tua Dashboard {{$item->name}}  </h1>
+      <h2 style="color: #168aad">
+        Hai {{$rev->count()}} recensioni e {{$mess->count()}} messaggi 
+      </h2>
   </main>
 @endsection
