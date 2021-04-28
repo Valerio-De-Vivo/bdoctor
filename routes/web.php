@@ -54,3 +54,10 @@ Route::resource('/review', 'AdminReviewController');
 Route::resource('/statistics', 'chartController');
 Route::get('/statistics', 'chartController@index')->name('admin.statistics');
 });
+
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/plans', 'PlanController@index')->name('plans.index');
+    Route::get('/plan/{plan}', 'PlanController@show')->name('plans.show');
+    Route::post('/subscription', 'SubscriptionController@create')->name('subscription.create');
+});

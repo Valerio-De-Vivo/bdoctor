@@ -18,6 +18,10 @@
         <li>
             <a class=" {{ (Request::route()->getName() == 'crea-dottore') ? 'active-dash' : '' }} " href="{{ route('crea-dottore') }}"><i class="fas fa-user-md"></i> Completa profilo</a>
         </li>
+
+        <li>
+            <a class=" {{ (Request::route()->getName() == 'plans.index') ? 'active-dash' : '' }} " href="{{ route('plans.index') }}"><i class="fas fa-user-md"></i> Piani promozioni</a>
+        </li>
     </ul>
 
 
