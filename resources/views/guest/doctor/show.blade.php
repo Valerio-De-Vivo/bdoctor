@@ -33,7 +33,7 @@
 
         <div class="container-single">
 
-          <div class="col-md-8">
+          <div class="col-lg-8">
 
             <div class="header-doc">
               <div class="foto">
@@ -55,7 +55,7 @@
 
           {{-- BANNER INFO  --}}
 
-          <div id="app" style="align-self: center" class="col-md-4">
+          <div id="app" style="align-self: center" class="col-lg-4">
             <div class="info">
               <h2>Info</h2>
               <p> Prestazione in 

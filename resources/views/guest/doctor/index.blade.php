@@ -23,11 +23,33 @@
 
         @include('layouts/partials/header')
 
-        pagina dottori
+        @foreach ($sub as $subscription)
+
+            @foreach ($profilo as $profil)
+                @if ($subscription->user_id == $profil->id)
+
+                <div style="min-height: calc(100vh - 100px)" class="container-doc">
+                    <div style="height: 500px" class="card-doc">
+
+                        <img src=" {{ $profil->photo }} " alt="Dottore">
+                        
+                        <h2>{{ $profil->name }} <br> {{ $profil->surname }}</h2>
+            
+                        <div class="card-info">
+                            <span><i class="fas fa-map-marker-alt"></i> <p>{{ $profil->city }}</p> </span>
+                            <span><i class="fas fa-phone"></i> <p>{{ $profil->telephone }}</p> </span>
+                        </div>
+
+                        <a class="btn green" href=" {{ route('show.doctor', [$profil->id]) }} "> Dettagli </a>
+                    </div>
+                </div>
+                @endif
+            @endforeach
+            
+        @endforeach
 
 
         @include('layouts/partials/footer')
-
 
     </body>
 

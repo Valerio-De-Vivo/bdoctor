@@ -8,6 +8,8 @@ use App\Message;
 use App\Review;
 use App\Specialization;
 use App\Performance;
+use App\Subscription;
+use App\Auth;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
@@ -20,9 +22,11 @@ class DoctorController extends Controller
     public function index()
     {
         $profilo = Doctor::all();
+        $sub = Subscription::all();
 
         $data = [
             'profilo' => $profilo,
+            'sub' => $sub 
         ];
 
         return view('guest.doctor.index', $data);

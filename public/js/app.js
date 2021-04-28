@@ -183,7 +183,30 @@ var app = new Vue({
     }
   }
 });
-var ctx = 'myChart'; // require('./bootstrap');
+var ctx = 'myChart';
+var iconMenu = document.querySelector('.nav-mobile');
+var barMenu = document.querySelector('.menu-mobile');
+var close = document.querySelector('.close');
+var cont = document.querySelector('#cont');
+iconMenu.addEventListener("click", function () {
+  barMenu.classList.toggle('display'); // gsap.from(".menu-mobile", { opacity: 0, duration: 0.8 });
+
+  gsap.timeline().from(".menu-mobile", {
+    yPercent: -70,
+    opacity: 0,
+    duration: .4
+  }).from("li", {
+    opacity: 0,
+    y: '-50px',
+    stagger: .2
+  }, "-=1.5");
+});
+close.addEventListener("click", function () {
+  barMenu.classList.toggle('display');
+});
+cont.addEventListener("click", function () {
+  barMenu.classList.toggle('display');
+}); // require('./bootstrap');
 
 /***/ }),
 

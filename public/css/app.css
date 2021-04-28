@@ -112,7 +112,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-right: 20px;
+  padding-right: 8px;
 }
 .main-menu .login ul {
   height: 50%;
@@ -125,8 +125,12 @@ button {
 }
 .main-menu #log,
 .main-menu #reg {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 3px 0;
+}
+
+.nav-mobile {
+  display: none;
 }
 
 .container-dashboard {
@@ -134,13 +138,10 @@ button {
 }
 
 #contatti {
-  background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   position: relative;
-}
-#contatti div {
   background-color: #fff;
 }
 #contatti .contact {
@@ -566,6 +567,166 @@ button {
   color: white;
 }
 
+.none {
+  display: none !important;
+}
+
+@media screen and (max-width: 992px) {
+  .menu-item,
+.login {
+    display: none !important;
+  }
+
+  .nav-mobile {
+    display: flex;
+    width: 80%;
+    justify-content: end;
+    padding-right: 30px;
+  }
+  .nav-mobile i {
+    font-size: 2rem;
+    color: #184e77;
+  }
+
+  .display {
+    display: flex !important;
+  }
+
+  .menu-mobile {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #184e77;
+    z-index: 20;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-mobile li {
+    margin: 40px 0;
+  }
+  .menu-mobile a {
+    color: white !important;
+    font-size: 2rem;
+  }
+  .menu-mobile i {
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .menu-mobile i:hover {
+    color: #d9ed92 !important;
+  }
+
+  .jumbo {
+    height: auto !important;
+    text-align: center !important;
+  }
+  .jumbo h1 {
+    margin-top: 50px;
+  }
+  .jumbo h3 {
+    font-size: 2rem !important;
+  }
+
+  .category {
+    width: calc(50% - 40px) !important;
+    margin: 20px !important;
+  }
+
+  .come-funziona {
+    padding-top: 50px;
+  }
+
+  .icon {
+    width: calc(50% - 20px) !important;
+    text-align: center !important;
+    margin: 10px !important;
+  }
+
+  .info div {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .card-doc {
+    width: calc(50% - 40px) !important;
+  }
+  .card-doc .card-info {
+    flex-wrap: wrap;
+  }
+  .card-doc .card-info span {
+    display: block !important;
+    width: 100% !important;
+  }
+  .card-doc .card-info span p {
+    font-size: 1.5rem;
+  }
+
+  .card-btn {
+    flex-wrap: wrap;
+  }
+  .card-btn a {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .container-single {
+    flex-wrap: wrap;
+    padding: 10px !important;
+  }
+  .container-single img {
+    margin-right: 10px;
+  }
+  .container-single .header-doc {
+    flex-wrap: wrap !important;
+  }
+  .container-single .cv,
+.container-single .header-doc,
+.container-single .col-doc {
+    padding: 0 !important;
+  }
+  .container-single .cv h1,
+.container-single .header-doc h1,
+.container-single .col-doc h1 {
+    font-size: 2rem;
+  }
+  .container-single .header-doc {
+    width: 100% !important;
+  }
+  .container-single #app {
+    margin: 20px 0;
+  }
+
+  #disponibilita {
+    padding: 20px;
+  }
+  #disponibilita div {
+    margin: 10px 0;
+  }
+
+  .mex-container h2 {
+    font-size: 2rem;
+  }
+  .mex-container img {
+    display: none;
+  }
+  .mex-container button {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-doc {
+    width: calc(100% - 20px) !important;
+    text-align: center !important;
+    margin: 10px !important;
+  }
+}
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

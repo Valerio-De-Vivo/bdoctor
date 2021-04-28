@@ -24,7 +24,7 @@
         @include('layouts/partials/header')
 
         <div class="jumbo">
-            <div class="col-md-7 banner-text">
+            <div class="col-lg-7 banner-text">
                 <div class="centrato">
                     <h1>BDoctor</h1>
                     <h3>Il primo portale italiano di dottori</h3>
@@ -32,7 +32,7 @@
                     <a class="btn" href="#come-funziona"> Come funziona </a>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-lg-5">
                 <img src="{{ asset('img/common/banner-home.png') }}" alt="">
             </div>
         </div>
@@ -96,7 +96,7 @@
 
         {{-- COME FUNZIONA  --}}
 
-        <div id="come-funziona" class="jumbo">
+        <div id="come-funziona" class="jumbo come-funziona">
             <div class="col-md-6 banner-text">
                 <div class="centrato">
                     <h3>Prenota il videoconsulto</h3>
