@@ -134,16 +134,59 @@ button {
 }
 
 #contatti {
-  height: 300px;
   background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  position: relative;
 }
 #contatti div {
-  height: 100%;
   background-color: #fff;
-  border: 1px solid red;
+}
+#contatti .contact {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+#contatti .contact h2 {
+  font-size: 4rem;
+  color: #76c893;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#contatti .contact .icon {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+#contatti .contact .icon img {
+  width: 100px;
+  height: 100px;
+}
+#contatti .contact .icon h3 {
+  color: #78b0e4;
+  font-size: 1.7rem;
+  margin-top: 10px;
+}
+#contatti .contact .icon h3 a {
+  color: #78b0e4;
+  text-decoration: none;
+}
+#contatti .info {
+  border-top: 2px solid #76c893;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+#contatti .info h4 {
+  color: #76c893;
+  font-size: 1.7rem;
+  margin: 20px 0;
 }
 
 .sidebar-dash {
@@ -504,6 +547,23 @@ button {
 .card {
   width: 40% !important;
   margin: 30px 0;
+}
+
+.scroll-top {
+  position: absolute;
+  background-image: linear-gradient(271deg, #d9ed92 0%, #76c893 100%);
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.scroll-top i {
+  font-size: 3em;
+  color: white;
 }
 
 /*!

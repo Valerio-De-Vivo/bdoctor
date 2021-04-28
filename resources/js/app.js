@@ -98,4 +98,6 @@ var app = new Vue({
 
 var ctx = 'myChart';
 
+
+
 // require('./bootstrap');

@@ -1,4 +1,4 @@
-<header class="main-menu">
+<header id="top" class="main-menu">
     <div class="logo-section">
         <img class="logo" src="{{ asset('img/common/logo.png') }}" alt="logo">
     </div>
