@@ -37,7 +37,7 @@
 <script src="https://js.stripe.com/v3/"></script>
 <script>
     // Create a Stripe client.
-var stripe = Stripe('{{ env("STRIPE_KEY") }}');
+var stripe = Stripe('pk_test_51IkcDsDrnRuLjlUiD2buDQTZ9OyrXMYAPDBjQMs3FNA62L9qgdho2FrPSn3OjFQ0xwiCdvoYAMJ7Aget2Sfmhs9K00S3qkFwwD');
 
 // Create an instance of Elements.
 var elements = stripe.elements();

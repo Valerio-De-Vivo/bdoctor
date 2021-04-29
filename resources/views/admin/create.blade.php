@@ -1,14 +1,15 @@
 @extends('layouts.dashboard')
 
 @section('content')
+    
+    <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 py-4" style="margin-top: 20px;">
     @if (session('status'))
-    <div class="container">
-    <div class="alert alert-warning">
+    <div class="">
+    <div class="alert alert-warning text-center" style="margin-bottom: 20px; width:12%;">
         {{ session('status') }}
     </div>
     </div>
     @endif
-    <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 py-4" style="margin-top: 60px;">
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
