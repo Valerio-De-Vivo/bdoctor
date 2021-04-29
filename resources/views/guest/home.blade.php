@@ -28,12 +28,12 @@
                 <div class="centrato">
                     <h1>BDoctor</h1>
                     <h3>Il primo portale italiano di dottori</h3>
-                    <a class="btn green" href="{{ route('ricerca-avanzata') }}"> Ricerca dottore </a>
-                    <a class="btn" href="#come-funziona"> Come funziona </a>
+                    <a id="but" class="btn green" href="{{ route('ricerca-avanzata') }}"> Ricerca dottore </a>
+                    <a id="but" class="btn" href="#come-funziona"> Come funziona </a>
                 </div>
             </div>
             <div class="col-lg-5">
-                <img src="{{ asset('img/common/banner-home.png') }}" alt="">
+                <img id="img" src="{{ asset('img/common/banner-home.png') }}" alt="">
             </div>
         </div>
 

@@ -206,6 +206,44 @@ close.addEventListener("click", function () {
 });
 cont.addEventListener("click", function () {
   barMenu.classList.toggle('display');
+});
+gsap.timeline().from(".jumbo", {
+  duration: 1.4
+}).from(".centrato", {
+  yPercent: -70,
+  opacity: 0,
+  duration: 0.6
+}, "-=.9").from("#img", {
+  opacity: 0,
+  duration: 1
+}).from("#but", {
+  scale: 0,
+  duration: .8,
+  stagger: .6
+});
+gsap.from(".category", {
+  scrollTrigger: {
+    trigger: ".categories",
+    start: "top bottom",
+    end: "center center",
+    toggleActions: "restart none none none ",
+    scrub: true
+  },
+  xPercent: 400,
+  opacity: 0,
+  stagger: .3
+});
+gsap.from(".icon", {
+  scrollTrigger: {
+    trigger: "#contatti",
+    start: "top bottom",
+    end: "top center",
+    toggleActions: "restart none none none ",
+    scrub: true
+  },
+  xPercent: 200,
+  opacity: 0,
+  stagger: .3
 }); // require('./bootstrap');
 
 /***/ }),

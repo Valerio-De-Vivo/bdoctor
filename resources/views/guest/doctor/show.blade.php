@@ -58,10 +58,10 @@
           <div id="app" style="align-self: center" class="col-lg-4">
             <div class="info">
               <h2>Info</h2>
-              <p> Prestazione in 
-                @foreach ($profile->performance as $item)
+              <p> Prestazione in Studio
+                {{-- @foreach ($profile->performance as $item)
                     {{$item->performance}}
-                @endforeach
+                @endforeach --}}
               </p>
 
 

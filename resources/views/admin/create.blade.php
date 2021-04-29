@@ -18,9 +18,11 @@
             </ul>
         </div>
         @endif
-        <form class="col-md-8" method="post" action="{{url('admin/create')}}" enctype="multipart/form-data">
-        @method('POST')
-        @csrf
+            
+            
+            <form class="col-md-8" method="post" action="{{route('doctor.update', $dati_dottore->id)}}" enctype="multipart/form-data">
+            @method('PUT')
+            @csrf
 
             <div class="form-group">
                 <label for="image">Carica l'immagine</label>
@@ -72,5 +74,6 @@
             <div id="emailHelp" class="form-text mb-3">*: campo obbligatorio</div>
             <button type="submit" class="btn blu">Invia</button>
         </form>
+        
     </main>
 @endsection

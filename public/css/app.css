@@ -509,7 +509,7 @@ button {
 
 .mex-container {
   min-height: calc(100vh - 70px);
-  padding: 10% 10% 0 70px;
+  padding: 5% 5% 5% 70px;
   background-image: linear-gradient(269deg, #168aad 0%, #184e77 100%);
   color: #fff;
   position: relative;

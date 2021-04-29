@@ -132,7 +132,7 @@ class DoctorController extends Controller
     public function edit()
     {
         $id = Auth::id();
-        $doctor = Doctor::find($id);
+        $doctor = Doctor::where('user_id', $id)->first();
 
         $specialization = Specialization::all();
         $performance = Performance::all();
@@ -157,16 +157,20 @@ class DoctorController extends Controller
     public function update(Request $request)
     {
         $id = Auth::id();
-        $doctor = Doctor::find($id);
+        // $doctor = Doctor::find($id);
+        $doctor = Doctor::where('user_id', $id)->first();
+
 
         $data = $request->all();
 
-        $request->validate(
-            [
-              'address'=>'required|max:200',
-              'city'=>'required|max:100',
-              'specialization'=>'required',
-            ]);
+        // dd($doctor);
+
+        // $request->validate(
+        //     [
+        //     'address'=>'required|max:200',
+        //     'city'=>'required|max:100',
+        //     'specialization'=>'required',
+        //     ]);
 
         $doctor->update($data);
         if(array_key_exists('specializations',$data)){
