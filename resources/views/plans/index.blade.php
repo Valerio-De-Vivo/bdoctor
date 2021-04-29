@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Plans</div>
+                <h2 >Promozioni</h2>
                 <div class="card-body">
                     <ul class="list-group">
                         @foreach($plans as $plan)
@@ -16,9 +16,9 @@
                                 <h5>{{ $plan->cost }} €</h5>
                                 <h5>{{ $plan->description }}</h5>
                                 @if(empty($activeplan))
-                                  <a href="{{ route('plans.show', $plan->slug) }}" class="btn btn-outline-dark pull-right">Scegli questo pacchetto</a>
+                                  <a href="{{ route('plans.show', $plan->slug) }}" class="btn blu pull-right">Scegli questo pacchetto</a>
                                 @elseif($activeplan->name == $plan->name)
-                                  <a href="#" class="btn btn-outline-dark pull-right btn-success">Promozione attiva</a>
+                                  <a href="#" class="btn blu pull-right btn-success">Promozione attiva</a>
                                 @endif
                             </div>
                         </li>

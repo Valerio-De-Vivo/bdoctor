@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-dark" type="submit">Paga</button>
+                        <button class="btn blu" type="submit">Paga</button>
                     </div>
                 </form>
             </div>
